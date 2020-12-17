@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react'
-import { Segment } from 'semantic-ui-react'
+import {
+  Segment,
+  Grid
+} from 'semantic-ui-react'
 
 const App = (props) => {
   const pdfFile = require('../assets/cv.pdf')
@@ -14,11 +17,9 @@ const App = (props) => {
       </section>
     </Segment>
     <Segment vertical>
-      <address id="contact">
-        <h3>Contact</h3>
-        <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
-        <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
-      </address>
+      <section id="experience">
+        <h3>Experience</h3>
+      </section>
     </Segment>
     <Segment vertical>
       <section id="projects">
@@ -60,6 +61,13 @@ const App = (props) => {
           <a href="https://github.com/freerangeandy/ff-reality">GitHub</a>
         </article>
       </section>
+    </Segment>
+    <Segment vertical>
+      <address id="contact">
+        <h3>Contact</h3>
+        <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
+        <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
+      </address>
     </Segment>
     </Fragment>
   )
