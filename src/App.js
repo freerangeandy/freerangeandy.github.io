@@ -1,21 +1,26 @@
 import React, { Fragment } from 'react'
+import { Segment } from 'semantic-ui-react'
 
 const App = (props) => {
   const pdfFile = require('../assets/cv.pdf')
 
   return (
     <Fragment>
+    <Segment vertical>
       <section id="about">
         <h1>Andy Lee</h1>
         <p>I'm a recent graduate of the Launch Academy boot camp with 7 years of prior software development experience - and a few years as a high school teacher sandwiched in-between. My favorite coding hobbies are building single-page web apps in JavaScript, trying out new 3rd-party APIs or libraries, and taking online courses in a new language.</p>
         <a href={pdfFile} target="blank">CV</a>
       </section>
+    </Segment>
+    <Segment vertical>
       <address id="contact">
         <h3>Contact</h3>
         <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
         <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
       </address>
-      <hr/>
+    </Segment>
+    <Segment vertical>
       <section id="projects">
         <h3>Projects</h3>
         <article>
@@ -55,6 +60,7 @@ const App = (props) => {
           <a href="https://github.com/freerangeandy/ff-reality">GitHub</a>
         </article>
       </section>
+    </Segment>
     </Fragment>
   )
 }
