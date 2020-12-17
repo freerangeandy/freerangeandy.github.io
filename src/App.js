@@ -1,22 +1,70 @@
 import React, { Fragment } from 'react'
+import {
+  Segment,
+  Grid,
+  Container
+} from 'semantic-ui-react'
 
 const App = (props) => {
   const pdfFile = require('../assets/cv.pdf')
 
   return (
     <Fragment>
-      <section id="about">
+    <Segment vertical inverted color="violet">
+      <Container text>
         <h1>Andy Lee</h1>
         <p>I'm a recent graduate of the Launch Academy boot camp with 7 years of prior software development experience - and a few years as a high school teacher sandwiched in-between. My favorite coding hobbies are building single-page web apps in JavaScript, trying out new 3rd-party APIs or libraries, and taking online courses in a new language.</p>
         <a href={pdfFile} target="blank">CV</a>
-      </section>
-      <address id="contact">
-        <h3>Contact</h3>
-        <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
-        <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
-      </address>
-      <hr/>
-      <section id="projects">
+      </Container>
+    </Segment>
+    <Segment vertical>
+        <h3>Experience</h3>
+        <Grid columns='equal' divided>
+          <Grid.Row>
+            <Grid.Column>
+              <Container text>
+                <h4>Education</h4>
+                <article>
+                  <h5>Massachusetts Institute of Technology</h5>
+                  <p>Cambridge, MA</p>
+                  <p>Bachelor of Science - Mathematics</p>
+                  <p>Sept. 2003 - June 2007</p>
+                </article>
+                <article>
+                  <h5>Launch Academy</h5>
+                  <p>Boston, MA</p>
+                  <p>Dec. 2019 - May 2020</p>
+                </article>
+              </Container>
+            </Grid.Column>
+            <Grid.Column>
+              <Container text>
+                <h4>Work</h4>
+                <article>
+                  <h5>Waltham Public Schools</h5>
+                  <p>Waltham, MA</p>
+                  <p>High School Math Teacher</p>
+                  <p>Oct. 2018 - Mar. 2019</p>
+                </article>
+                <article>
+                  <h5>Somerville Public Schools</h5>
+                  <p>Somerville, MA</p>
+                  <p>High School Math Teacher</p>
+                  <p>Feb. 2017 - June 2018</p>
+                </article>
+                <article>
+                  <h5>Variable Annuity Life Insurance Company (VALIC)</h5>
+                  <p>Boston, MA</p>
+                  <p>Programmer Analyst</p>
+                  <p>Feb. 2008 - Apr. 2015</p>
+                </article>
+              </Container>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+    </Segment>
+    <Segment vertical>
+      <Container text>
         <h3>Projects</h3>
         <article>
           <h4>Tab Loom</h4>
@@ -54,7 +102,15 @@ const App = (props) => {
           <a href="https://ff-reality.herokuapp.com/">Live</a>&nbsp;
           <a href="https://github.com/freerangeandy/ff-reality">GitHub</a>
         </article>
-      </section>
+      </Container>
+    </Segment>
+    <Segment vertical inverted color="violet">
+      <Container>
+        <h3>Contact</h3>
+        <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
+        <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
+      </Container>
+    </Segment>
     </Fragment>
   )
 }
