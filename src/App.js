@@ -10,7 +10,7 @@ const App = (props) => {
 
   return (
     <Fragment>
-    <Segment vertical>
+    <Segment vertical inverted color="violet">
       <Container text>
         <h1>Andy Lee</h1>
         <p>I'm a recent graduate of the Launch Academy boot camp with 7 years of prior software development experience - and a few years as a high school teacher sandwiched in-between. My favorite coding hobbies are building single-page web apps in JavaScript, trying out new 3rd-party APIs or libraries, and taking online courses in a new language.</p>
@@ -104,7 +104,7 @@ const App = (props) => {
         </article>
       </Container>
     </Segment>
-    <Segment vertical>
+    <Segment vertical inverted color="violet">
       <Container>
         <h3>Contact</h3>
         <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
