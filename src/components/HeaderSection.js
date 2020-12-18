@@ -26,11 +26,12 @@ const HeaderSection = (props) => {
         <Menu
           fixed={fixed ? "top" : null}
           inverted={!fixed}
-          color="violet"
+          secondary={!fixed}
+          pointing={!fixed}
           size="large"
         >
           <Container>
-            <Menu.Item as="a">About Me</Menu.Item>
+            <Menu.Item as="a" active>About Me</Menu.Item>
             <Menu.Item as="a">Experience</Menu.Item>
             <Menu.Item as="a">Projects</Menu.Item>
             <Menu.Item position="right">
