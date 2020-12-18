@@ -35,7 +35,7 @@ const HeaderSection = (props) => {
             <Menu.Item as="a">Experience</Menu.Item>
             <Menu.Item as="a">Projects</Menu.Item>
             <Menu.Item position="right">
-              <Button as="a">
+              <Button as="a" inverted={!fixed}>
                 Resumé
               </Button>
             </Menu.Item>
