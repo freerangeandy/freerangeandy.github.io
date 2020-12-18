@@ -17,7 +17,12 @@ const HeaderSection = (props) => {
       onBottomPassed={() => setFixed(true)}
       onBottomPassedReverse={() => setFixed(false)}
     >
-      <Segment vertical inverted color="violet">
+      <Segment
+        vertical
+        inverted
+        color="violet"
+        style={{ minHeight: 400, padding: '0 0 1em 0'}}
+      >
         <Menu
           fixed={fixed ? "top" : null}
           inverted={!fixed}
