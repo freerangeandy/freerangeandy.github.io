@@ -28,12 +28,17 @@ const AboutMeSection = (props) => {
       </p>
       <Grid centered relaxed>
         <Grid.Row>
+<<<<<<< HEAD
           <Grid.Column width={4}>
             <Segment
               inverted
               color='violet'
               style={{ textAlign:'left', marginLeft:'15%'}}
             >
+=======
+          <Grid.Column floated='center' width={4}>
+            <Segment inverted color='violet' style={{ textAlign:'left', marginLeft:'15%'}}>
+>>>>>>> 06f4c2fccdef5268fbf93789d80857745e7d09ab
             <h3>Skills</h3>
             <List bulleted>
               <List.Item>
@@ -51,12 +56,17 @@ const AboutMeSection = (props) => {
             </List>
             </Segment>
           </Grid.Column>
+<<<<<<< HEAD
           <Grid.Column width={4}>
             <Segment
               inverted
               color='violet'
               style={{ textAlign:'left',  marginLeft:'15%'}}
             >
+=======
+          <Grid.Column floated='center' width={4}>
+            <Segment inverted color='violet' style={{ textAlign:'left',  marginLeft:'15%'}}>
+>>>>>>> 06f4c2fccdef5268fbf93789d80857745e7d09ab
             <h3>Interests</h3>
             <List bulleted>
               <List.Item>
