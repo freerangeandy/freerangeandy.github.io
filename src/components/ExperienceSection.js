@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Container,
   Grid,
   Segment
 } from 'semantic-ui-react'
@@ -10,10 +9,13 @@ const ExperienceSection = (props) => {
   return (
     <Segment vertical>
       <h2 style={{ textAlign:'center', marginTop:'1em' }}>Experience</h2>
-      <Grid columns='equal' divided>
+      <Grid columns='equal' centered divided>
         <Grid.Row>
           <Grid.Column>
-            <Container text>
+            <Segment
+              basic
+              style={{ float:'right'}}
+            >
               <h3>Education</h3>
               <Experience
                 name="Massachusetts Institute of Technology"
@@ -26,10 +28,13 @@ const ExperienceSection = (props) => {
                 location="Boston, MA"
                 date={{ start: "Dec. 2019", end: "May 2020" }}
               />
-            </Container>
+            </Segment>
           </Grid.Column>
           <Grid.Column>
-            <Container text>
+            <Segment
+              basic
+              style={{ marginLeft:'10%'}}
+            >
               <h3>Work</h3>
               <Experience
                 name="Waltham Public Schools"
@@ -48,8 +53,8 @@ const ExperienceSection = (props) => {
                 location="Boston, MA"
                 title="Programmer Analyst"
                 date={{ start: "Feb. 2008", end: "Apr. 2015" }}
-              />                      
-            </Container>
+              />
+            </Segment>
           </Grid.Column>
         </Grid.Row>
       </Grid>
