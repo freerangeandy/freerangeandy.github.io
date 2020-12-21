@@ -21,7 +21,7 @@ const AboutMeSection = (props) => {
       </List>
       <p style={{ marginTop:'0.5em' }}>
         Experienced programmer &nbsp;&nbsp;<Icon name='cog' />&nbsp; Math educator &nbsp;&nbsp;<Icon name='cog' />&nbsp; Boot camp graduate<br/>
-        Currently looking for a role as a <i>full-stack</i> or <i>front-end software developer</i>.
+        Currently looking for a role as a <i>full-stack</i> or <i>front-end software developer</i>
       </p>
       <Grid centered relaxed>
         <Grid.Row>
@@ -40,7 +40,7 @@ const AboutMeSection = (props) => {
                 <List.Content>ReactJS</List.Content>
               </List.Item>
               <List.Item>
-                <List.Content>Ruby</List.Content>
+                <List.Content>Ruby on Rails</List.Content>
               </List.Item>
               <List.Item>
                 <List.Content>Python</List.Content>
