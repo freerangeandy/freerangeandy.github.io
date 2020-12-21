@@ -10,7 +10,7 @@ import {
 const AboutMeSection = (props) => {
   return (
     <Container textAlign='center'>
-      <h1>Andy Lee</h1>
+      <h1 style={{ marginBottom:'0' }}>Andy Lee</h1>
       <List link horizontal>
         <List.Item as='a' href="https://www.linkedin.com/in/andrew-lee-1701d/" target='#'>
           <List.Content>
@@ -23,7 +23,7 @@ const AboutMeSection = (props) => {
           </List.Content>
         </List.Item>
       </List>
-      <p>
+      <p style={{ marginTop:'0.5em' }}>
         Experienced software engineer <Icon name='cog' /> High school math teacher <Icon name='cog' /> Boot camp graduate<br/>
         Currently looking for a role as a <i>full-stack</i> or <i>front-end software developer</i>.
       </p>
