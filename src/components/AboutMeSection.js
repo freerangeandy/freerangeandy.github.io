@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Icon, List, Grid } from 'semantic-ui-react'
+import { Container, Icon, List, Grid, Segment } from 'semantic-ui-react'
 
 const AboutMeSection = (props) => {
   return (
@@ -26,24 +26,50 @@ const AboutMeSection = (props) => {
         single-page web apps in JavaScript, trying out new 3rd-party APIs or
         libraries, and taking online courses in a new language.
       </p>
-      <Grid columns='equal'>
+      <Grid centered relaxed>
         <Grid.Row>
-          <Grid.Column>
+          <Grid.Column width={4}>
+            <Segment
+              inverted
+              color='violet'
+              style={{ textAlign:'left', marginLeft:'15%'}}
+            >
             <h3>Skills</h3>
-            <List>
-              <List.Item>JavaScript</List.Item>
-              <List.Item>ReactJS</List.Item>
-              <List.Item>Ruby</List.Item>
-              <List.Item>Python</List.Item>
+            <List bulleted>
+              <List.Item>
+                <List.Content>JavaScript</List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>ReactJS</List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>Ruby</List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>Python</List.Content>
+              </List.Item>
             </List>
+            </Segment>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column width={4}>
+            <Segment
+              inverted
+              color='violet'
+              style={{ textAlign:'left',  marginLeft:'15%'}}
+            >
             <h3>Interests</h3>
-            <List>
-              <List.Item>STEM Education</List.Item>
-              <List.Item>Sustainable Tech</List.Item>
-              <List.Item>Economic Justice</List.Item>
+            <List bulleted>
+              <List.Item>
+                <List.Content>STEM Education</List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>Sustainable Tech</List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Content>Economic Justice</List.Content>
+              </List.Item>
             </List>
+            </Segment>
           </Grid.Column>
         </Grid.Row>
       </Grid>
