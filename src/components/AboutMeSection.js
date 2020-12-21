@@ -1,21 +1,25 @@
 import React from 'react'
-import { Container, Icon, List, Grid, Segment } from 'semantic-ui-react'
+import {
+  Container,
+  Icon,
+  List,
+  Grid,
+  Segment
+} from 'semantic-ui-react'
 
 const AboutMeSection = (props) => {
   return (
     <Container textAlign='center'>
       <h1>Andy Lee</h1>
-      <List horizontal>
-        <List.Item>
+      <List link horizontal>
+        <List.Item as='a' href="https://www.linkedin.com/in/andrew-lee-1701d/" target='#'>
           <List.Content>
-            <Icon link name='linkedin' />
-            <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
+            <Icon link name='linkedin' /> LinkedIn
           </List.Content>
         </List.Item>
-        <List.Item>
+        <List.Item as='a' href="https://www.github.com/freerangeandy" target='#'>
           <List.Content>
-            <Icon link name='github' />
-            <a href="https://www.github.com/freerangeandy">GitHub</a>
+            <Icon link name='github' /> GitHub
           </List.Content>
         </List.Item>
       </List>
