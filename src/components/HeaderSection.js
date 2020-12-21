@@ -6,6 +6,7 @@ import {
   Menu,
   Button
 } from 'semantic-ui-react'
+import AboutMeSection from './AboutMeSection'
 
 const HeaderSection = (props) => {
   const [fixed, setFixed] = useState(false)
@@ -21,7 +22,7 @@ const HeaderSection = (props) => {
         vertical
         inverted
         color="violet"
-        style={{ minHeight: 400, padding: '0 0 1em 0'}}
+        style={{ minHeight: 350, padding: '0 0 1em 0'}}
       >
         <Menu
           fixed={fixed ? "top" : null}
@@ -41,10 +42,7 @@ const HeaderSection = (props) => {
             </Menu.Item>
           </Container>
         </Menu>
-        <Container text>
-          <h1>Andy Lee</h1>
-          <p>I'm a recent graduate of the Launch Academy boot camp with 7 years of prior software development experience - and a few years as a high school teacher sandwiched in-between. My favorite coding hobbies are building single-page web apps in JavaScript, trying out new 3rd-party APIs or libraries, and taking online courses in a new language.</p>
-        </Container>
+        <AboutMeSection />
       </Segment>
     </Visibility>
   )

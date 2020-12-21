@@ -100,9 +100,7 @@ const App = (props) => {
     </Segment>
     <Segment vertical inverted color="violet">
       <Container>
-        <h3>Contact</h3>
-        <a href="mailto:andy_lee@alum.mit.edu">Email</a><br />
-        <a href="https://www.linkedin.com/in/andrew-lee-1701d/">LinkedIn</a>
+
       </Container>
     </Segment>
     </Fragment>
