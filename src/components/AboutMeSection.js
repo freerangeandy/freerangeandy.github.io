@@ -20,11 +20,8 @@ const AboutMeSection = (props) => {
         </List.Item>
       </List>
       <p>
-        I'm a recent graduate of the Launch Academy boot camp with 7 years of
-        prior software development experience - and a few years as a high school
-        teacher sandwiched in-between. My favorite coding hobbies are building
-        single-page web apps in JavaScript, trying out new 3rd-party APIs or
-        libraries, and taking online courses in a new language.
+        Experienced software engineer <Icon name='cog' /> High school math teacher <Icon name='cog' /> Boot camp graduate<br/>
+        Currently looking for a role as a <i>full-stack</i> or <i>front-end software developer</i>.
       </p>
       <Grid centered relaxed>
         <Grid.Row>
