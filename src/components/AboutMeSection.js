@@ -55,15 +55,18 @@ const AboutMeSection = (props) => {
               style={{ textAlign:'left',  marginLeft:'15%'}}
             >
             <h3>Interests</h3>
-            <List bulleted>
+            <List>
               <List.Item>
-                <List.Content>STEM Education</List.Content>
+                <Icon link name='lab' />
+                <List.Content>&nbsp;STEM Education</List.Content>
               </List.Item>
               <List.Item>
+                <Icon link name='leaf' />
                 <List.Content>Sustainable Tech</List.Content>
               </List.Item>
               <List.Item>
-                <List.Content>Economic Justice</List.Content>
+                <Icon link name='subway' />
+                <List.Content>&nbsp;Public Policy</List.Content>
               </List.Item>
             </List>
             </Segment>
