@@ -1,17 +1,18 @@
 import React from 'react'
+import { List } from 'semantic-ui-react'
 
 const Experience = (props) => {
-  const degree = props.degree ? (<p>{props.degree}</p>) : null
-  const title = props.title ? (<p>{props.title}</p>) : null
+  const degree = props.degree ? (<List.Item>{props.degree}</List.Item>) : null
+  const title = props.title ? (<List.Item>{props.title}</List.Item>) : null
 
   return (
-    <article>
+    <List>
       <h5>{props.name}</h5>
-      <p>{props.location}</p>
+      <List.Item>{props.location}</List.Item>
       {title}
       {degree}
-      <p>{props.date.start} - {props.date.end}</p>
-    </article>
+      <List.Item>{props.date.start} - {props.date.end}</List.Item>
+    </List>
   )
 }
 
