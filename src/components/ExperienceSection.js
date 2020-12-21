@@ -8,12 +8,12 @@ import {
 const ExperienceSection = (props) => {
   return (
     <Segment vertical>
-      <h3>Experience</h3>
+      <h2 style={{ textAlign:'center', marginTop:'1em' }}>Experience</h2>
       <Grid columns='equal' divided>
         <Grid.Row>
           <Grid.Column>
             <Container text>
-              <h4>Education</h4>
+              <h3>Education</h3>
               <article>
                 <h5>Massachusetts Institute of Technology</h5>
                 <p>Cambridge, MA</p>
@@ -29,7 +29,7 @@ const ExperienceSection = (props) => {
           </Grid.Column>
           <Grid.Column>
             <Container text>
-              <h4>Work</h4>
+              <h3>Work</h3>
               <article>
                 <h5>Waltham Public Schools</h5>
                 <p>Waltham, MA</p>
