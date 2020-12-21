@@ -30,9 +30,20 @@ const AboutMeSection = (props) => {
         <Grid.Row>
           <Grid.Column>
             <h3>Skills</h3>
+            <List>
+              <List.Item>JavaScript</List.Item>
+              <List.Item>ReactJS</List.Item>
+              <List.Item>Ruby</List.Item>
+              <List.Item>Python</List.Item>
+            </List>
           </Grid.Column>
           <Grid.Column>
             <h3>Interests</h3>
+            <List>
+              <List.Item>STEM Education</List.Item>
+              <List.Item>Sustainable Tech</List.Item>
+              <List.Item>Economic Justice</List.Item>
+            </List>
           </Grid.Column>
         </Grid.Row>
       </Grid>
