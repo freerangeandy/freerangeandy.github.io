@@ -22,7 +22,7 @@ const HeaderSection = (props) => {
         vertical
         inverted
         color="violet"
-        style={{ minHeight: 400, padding: '0 0 1em 0'}}
+        style={{ minHeight: 350, padding: '0 0 1em 0'}}
       >
         <Menu
           fixed={fixed ? "top" : null}
