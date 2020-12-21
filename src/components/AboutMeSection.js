@@ -20,7 +20,7 @@ const AboutMeSection = (props) => {
         </List.Item>
       </List>
       <p style={{ marginTop:'0.5em' }}>
-        Experienced software engineer <Icon name='cog' /> High school math teacher <Icon name='cog' /> Boot camp graduate<br/>
+        Experienced programmer &nbsp;&nbsp;<Icon name='cog' />&nbsp; Math educator &nbsp;&nbsp;<Icon name='cog' />&nbsp; Boot camp graduate<br/>
         Currently looking for a role as a <i>full-stack</i> or <i>front-end software developer</i>.
       </p>
       <Grid centered relaxed>
