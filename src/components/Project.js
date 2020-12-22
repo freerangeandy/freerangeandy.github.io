@@ -6,7 +6,9 @@ import {
 const Project = (props) => {
   return (
     <Card>
-      <Card.Content header={props.name} />
+      <Card.Header style={{ padding: '0.5em' }}>
+        <h4>{props.name}</h4>
+      </Card.Header>
       <Card.Content description={props.description} />
       <Card.Content extra>
       <a href={props.siteurl}>Live</a>&nbsp;
