@@ -6,9 +6,15 @@ import {
 } from 'semantic-ui-react'
 
 const Project = (props) => {
-  const labels = props.labels ? props.labels.map((label,idx) => {
-    return (<Label horizontal key={idx}>{label}</Label>)
-  }) : null
+  const labels = props.labels ? props.labels.map((label,idx) => (
+    <Label
+      horizontal
+      key={idx}
+      style={{ marginBottom:'0.2em' }}
+    >
+      {label}
+    </Label>
+  )) : null
   return (
     <Card>
       <Card.Header style={{ padding: '0.5em' }}>
@@ -19,7 +25,7 @@ const Project = (props) => {
         </h4>
       </Card.Header>
       <Card.Content description={props.description} />
-      <Card.Content extra>
+      <Card.Content style={{ padding:'0.5em' }}>
         {labels}
       </Card.Content>
     </Card>
