@@ -3,10 +3,12 @@ import {
   Card,
   Icon,
   Label,
-  Header
+  Header,
+  Image
 } from 'semantic-ui-react'
 
 const Project = (props) => {
+  const screenshot = props.screenshot ? <Image src={props.screenshot} /> : null
   const labels = props.labels ? props.labels.map((label,idx) => (
     <Label
       horizontal
@@ -25,6 +27,7 @@ const Project = (props) => {
           <a href={props.gitrepo} target="#"><Icon link name='github' /></a>
         </Header>
       </Card.Header>
+      {screenshot}
       <Card.Content description={props.description} />
       <Card.Content style={{ padding:'0.5em' }}>
         {labels}
