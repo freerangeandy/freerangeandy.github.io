@@ -6,6 +6,7 @@ import {
 import Project from './Project'
 
 const ProjectSection = (props) => {
+  const flippiePNG = require('../../assets/screenshots/flippie_bird.png')
   return (
     <Segment
       vertical
@@ -46,6 +47,7 @@ const ProjectSection = (props) => {
         <Project
           name="Flippie Bird"
           description="Arcade game inspired by Flappy Bird"
+          screenshot={flippiePNG}
           siteurl="https://freerangeandy.github.io/flippie-bird/"
           gitrepo="https://github.com/freerangeandy/flippie-bird/"
           labels={["JavaScript","PhaserJS","Game","Hackathon"]}
