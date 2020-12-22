@@ -11,7 +11,7 @@ const ProjectSection = (props) => {
       vertical
       style={{ margin: '0 10%' }}
     >
-      <h3>Projects</h3>
+      <h2 style={{ textAlign:'center', marginTop:'1em' }}>Projects</h2>
       <Card.Group itemsPerRow={3}>
         <Project
           name="Tab Loom"
