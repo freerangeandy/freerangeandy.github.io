@@ -2,7 +2,8 @@ import React from 'react'
 import {
   Card,
   Icon,
-  Label
+  Label,
+  Header
 } from 'semantic-ui-react'
 
 const Project = (props) => {
@@ -18,11 +19,11 @@ const Project = (props) => {
   return (
     <Card>
       <Card.Header style={{ padding: '0.5em' }}>
-        <h4>
+        <Header as='h5'>
           {props.name}&nbsp;&nbsp;&nbsp;
           <a href={props.siteurl} target="#"><Icon link name='sign-in' /></a>
           <a href={props.gitrepo} target="#"><Icon link name='github' /></a>
-        </h4>
+        </Header>
       </Card.Header>
       <Card.Content description={props.description} />
       <Card.Content style={{ padding:'0.5em' }}>

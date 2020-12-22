@@ -9,9 +9,11 @@ const ProjectSection = (props) => {
   return (
     <Segment
       vertical
-      style={{ margin: '0 10%' }}
+      inverted
+      color="violet"
+      style={{ padding: '0 10%' }}
     >
-      <h2 style={{ textAlign:'center', marginTop:'1em' }}>Projects</h2>
+      <h2 style={{ textAlign:'center', paddingTop:'1em' }}>Projects</h2>
       <Card.Group itemsPerRow={3}>
         <Project
           name="Tab Loom"
