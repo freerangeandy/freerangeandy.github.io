@@ -18,36 +18,42 @@ const ProjectSection = (props) => {
           description="Virtual sketchbook for creating guitar tablature"
           siteurl="https://tab-loom.herokuapp.com/"
           gitrepo="https://github.com/freerangeandy/tab-loom"
+          labels={["JavaScript","React","Ruby on Rails","PostgreSQL","Sass","API"]}
         />
         <Project
           name="MyCalculator"
           description="Scientific Calculator with media-responsive layout"
           siteurl="https://my-calculator-d4e79.firebaseapp.com/"
           gitrepo="https://github.com/freerangeandy/mycalculator"
+          labels={["JavaScript","React","MaterialUI"]}
         />
         <Project
           name="Many City Weather"
           description="Hourly weather forecast comparison between cities"
           siteurl="https://freerangeandy.github.io/many-city-weather/"
           gitrepo="https://github.com/freerangeandy/many-city-weather"
+          labels={["JavaScript","React","API","Hackathon"]}
         />
         <Project
           name="Flippie Bird"
           description="Arcade game inspired by Flappy Bird"
           siteurl="https://freerangeandy.github.io/flippie-bird/"
           gitrepo="https://github.com/freerangeandy/flippie-bird/"
+          labels={["JavaScript","PhaserJS","Game","Hackathon"]}
         />
         <Project
           name="Cell Blocks"
           description="Cellular automata sandbox (Conway's Game of Life)"
           siteurl="https://freerangeandy.github.io/cell-blocks/"
           gitrepo="https://github.com/freerangeandy/cell-blocks"
+          labels={["JavaScript","HTML5"]}
         />
         <Project
           name="Fantasy Football Reality 2020"
           description="Compare weekly fantasy football projections vs. actual results"
           siteurl="https://ff-reality.herokuapp.com/"
           gitrepo="https://github.com/freerangeandy/ff-reality"
+          labels={["Python","Flask","pandas","Web-scraping"]}
         />
       </Card.Group>
     </Segment>
