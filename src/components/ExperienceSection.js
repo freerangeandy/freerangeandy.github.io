@@ -16,25 +16,6 @@ const ExperienceSection = (props) => {
               basic
               style={{ float:'right'}}
             >
-              <h3>Education</h3>
-              <Experience
-                name="Massachusetts Institute of Technology"
-                location="Cambridge, MA"
-                degree="Bachelor of Science - Mathematics"
-                date={{ start: "Sept. 2003", end: "June 2007" }}
-              />
-              <Experience
-                name="Launch Academy"
-                location="Boston, MA"
-                date={{ start: "Dec. 2019", end: "May 2020" }}
-              />
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment
-              basic
-              style={{ marginLeft:'10%'}}
-            >
               <h3>Work</h3>
               <Experience
                 name="Waltham Public Schools"
@@ -53,6 +34,25 @@ const ExperienceSection = (props) => {
                 location="Boston, MA"
                 title="Programmer Analyst"
                 date={{ start: "Feb. 2008", end: "Apr. 2015" }}
+              />
+            </Segment>
+          </Grid.Column>
+          <Grid.Column>
+            <Segment
+              basic
+              style={{ marginLeft:'10%'}}
+            >
+              <h3>Education</h3>
+              <Experience
+                name="Massachusetts Institute of Technology"
+                location="Cambridge, MA"
+                degree="Bachelor of Science - Mathematics"
+                date={{ start: "Sept. 2003", end: "June 2007" }}
+              />
+              <Experience
+                name="Launch Academy"
+                location="Boston, MA"
+                date={{ start: "Dec. 2019", end: "May 2020" }}
               />
             </Segment>
           </Grid.Column>
