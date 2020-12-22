@@ -1,15 +1,18 @@
 import React from 'react'
 import {
   Segment,
-  Container
+  Card
 } from 'semantic-ui-react'
 import Project from './Project'
 
 const ProjectSection = (props) => {
   return (
-    <Segment vertical>
-      <Container text>
-        <h3>Projects</h3>
+    <Segment
+      vertical
+      style={{ margin: '0 10%' }}
+    >
+      <h3>Projects</h3>
+      <Card.Group itemsPerRow={3}>
         <Project
           name="Tab Loom"
           description="Virtual sketchbook for creating guitar tablature"
@@ -46,7 +49,7 @@ const ProjectSection = (props) => {
           siteurl="https://ff-reality.herokuapp.com/"
           gitrepo="https://github.com/freerangeandy/ff-reality"
         />
-      </Container>
+      </Card.Group>
     </Segment>
   )
 }
