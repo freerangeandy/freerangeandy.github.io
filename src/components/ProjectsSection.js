@@ -21,8 +21,15 @@ const ProjectSection = (props) => {
           labels={["JavaScript","React","Ruby on Rails","PostgreSQL","Sass","API"]}
         />
         <Project
+          name="Game Review Hero"
+          description="Social website for users to post reviews for video games"
+          siteurl="https://gamereviewhero.herokuapp.com/"
+          gitrepo="https://github.com/freerangeandy/video-game-reviews"
+          labels={["Team project","JavaScript","React","Ruby on Rails","PostgreSQL"]}
+        />
+        <Project
           name="MyCalculator"
-          description="Scientific Calculator with media-responsive layout"
+          description="Scientific calculator with media-responsive layout"
           siteurl="https://my-calculator-d4e79.firebaseapp.com/"
           gitrepo="https://github.com/freerangeandy/mycalculator"
           labels={["JavaScript","React","MaterialUI"]}
