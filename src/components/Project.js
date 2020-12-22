@@ -5,12 +5,14 @@ import {
 
 const Project = (props) => {
   return (
-    <article>
-      <h4>{props.name}</h4>
-      <p>{props.description}</p>
+    <Card>
+      <Card.Content header={props.name} />
+      <Card.Content description={props.description} />
+      <Card.Content extra>
       <a href={props.siteurl}>Live</a>&nbsp;
       <a href={props.gitrepo}>GitHub</a>
-    </article>
+      </Card.Content>
+    </Card>
   )
 }
 
