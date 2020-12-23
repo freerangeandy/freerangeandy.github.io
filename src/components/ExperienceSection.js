@@ -1,13 +1,17 @@
 import React from 'react'
 import {
   Grid,
-  Segment
+  Segment,
+  Ref
 } from 'semantic-ui-react'
 import Experience from './Experience'
 
 const ExperienceSection = (props) => {
   return (
     <Segment vertical>
+      <Ref innerRef={props.experienceRef}>
+        <h2 style={{ height:'1em' }}></h2>
+      </Ref>
       <h2 style={{ textAlign:'center', marginTop:'1em' }}>Experience</h2>
       <Grid columns='equal' centered divided>
         <Grid.Row>
