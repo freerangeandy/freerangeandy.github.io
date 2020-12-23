@@ -4,7 +4,8 @@ import {
   Segment,
   Container,
   Menu,
-  Button
+  Button,
+  Ref
 } from 'semantic-ui-react'
 import AboutMeSection from './AboutMeSection'
 
@@ -32,9 +33,9 @@ const HeaderSection = (props) => {
           size="large"
         >
           <Container>
-            <Menu.Item as="a" active>About Me</Menu.Item>
-            <Menu.Item as="a">Experience</Menu.Item>
-            <Menu.Item as="a">Projects</Menu.Item>
+            <Menu.Item onClick={()=>props.aboutMeRef.current.scrollIntoView()}>About Me</Menu.Item>
+            <Menu.Item onClick={()=>props.experienceRef.current.scrollIntoView()}>Experience</Menu.Item>
+            <Menu.Item onClick={()=>props.projectsRef.current.scrollIntoView()}>Projects</Menu.Item>
             <Menu.Item position="right">
               <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
                 Resumé
@@ -42,7 +43,9 @@ const HeaderSection = (props) => {
             </Menu.Item>
           </Container>
         </Menu>
-        <AboutMeSection />
+        <Ref innerRef={props.aboutMeRef}>
+          <AboutMeSection />
+        </Ref>
       </Segment>
     </Visibility>
   )

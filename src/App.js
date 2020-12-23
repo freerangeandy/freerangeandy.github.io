@@ -15,9 +15,11 @@ const App = (props) => {
 
   return (
     <Fragment>
-      <Ref innerRef={aboutMeRef}>
-        <HeaderSection />
-      </Ref>
+      <HeaderSection
+        aboutMeRef={aboutMeRef} 
+        experienceRef={experienceRef}
+        projectsRef={projectsRef}
+      />
       <Ref innerRef={experienceRef}>
         <ExperienceSection />
       </Ref>
