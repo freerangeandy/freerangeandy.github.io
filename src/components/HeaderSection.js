@@ -16,6 +16,7 @@ const HeaderSection = (props) => {
       once={false}
       onBottomPassed={() => setFixed(true)}
       onBottomPassedReverse={() => setFixed(false)}
+      onOnScreen={()=>props.setActiveItem("aboutMe")}
     >
         <Ref innerRef={props.aboutMeRef}>
       <Segment
@@ -29,6 +30,8 @@ const HeaderSection = (props) => {
           aboutMeRef={props.aboutMeRef}
           experienceRef={props.experienceRef}
           projectsRef={props.projectsRef}
+          activeItem={props.activeItem}
+          setActiveItem={props.setActiveItem}
         />
           <AboutMeSection />
       </Segment>

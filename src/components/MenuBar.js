@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Container,
   Menu,
@@ -7,7 +7,6 @@ import {
 
 const MenuBar = (props) => {
   const { fixed, aboutMeRef, experienceRef, projectsRef } = props
-  const [activeItem, setActiveItem] = useState("aboutMe")
   const pdfFile = require('../../assets/cv.pdf')
 
   const sectionRef = {
@@ -18,7 +17,7 @@ const MenuBar = (props) => {
 
   const handleMenuClick = (name) => {
     sectionRef[name].current.scrollIntoView()
-    setActiveItem(name)
+    props.setActiveItem(name)
   }
 
   return (
@@ -32,21 +31,21 @@ const MenuBar = (props) => {
       <Container>
         <Menu.Item
           name="aboutMe"
-          active={activeItem == "aboutMe"}
+          active={props.activeItem == "aboutMe"}
           onClick={() => handleMenuClick("aboutMe")}
         >
           About Me
         </Menu.Item>
         <Menu.Item
           name="experience"
-          active={activeItem == "experience"}
+          active={props.activeItem == "experience"}
           onClick={() => handleMenuClick("experience")}
         >
           Experience
         </Menu.Item>
         <Menu.Item
           name="projects"
-          active={activeItem == "projects"}
+          active={props.activeItem == "projects"}
           onClick={() => handleMenuClick("projects")}
         >
           Projects

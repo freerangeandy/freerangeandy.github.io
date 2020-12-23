@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from 'react'
+import React, { Fragment, useState, useRef } from 'react'
 import {
   Segment,
   Container
@@ -11,6 +11,7 @@ const App = (props) => {
   const aboutMeRef = useRef(null)
   const experienceRef = useRef(null)
   const projectsRef = useRef(null)
+  const [activeItem, setActiveItem] = useState("aboutMe")
 
   return (
     <Fragment>
@@ -18,6 +19,8 @@ const App = (props) => {
         aboutMeRef={aboutMeRef}
         experienceRef={experienceRef}
         projectsRef={projectsRef}
+        activeItem={activeItem}
+        setActiveItem={setActiveItem}
       />
       <ExperienceSection experienceRef={experienceRef}/>
       <ProjectsSection projectsRef={projectsRef}/>
