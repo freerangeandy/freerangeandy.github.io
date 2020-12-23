@@ -23,9 +23,9 @@ const ProjectSection = (props) => {
       style={{ padding: '0 10%' }}
     >
       <Ref innerRef={props.projectsRef}>
-        <h2 style={{ height:'1em' }}></h2>
+        <h2 style={{ height:'1.3em' }}></h2>
       </Ref>
-      <h2 style={{ textAlign:'center', paddingTop:'1em' }}>Projects</h2>
+      <h2 style={{ textAlign:'center' }}>Projects</h2>
       <Card.Group itemsPerRow={3}>
         <Project
           name="Tab Loom"
