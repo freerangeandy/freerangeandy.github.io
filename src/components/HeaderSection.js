@@ -16,7 +16,7 @@ const HeaderSection = (props) => {
       once={false}
       onBottomPassed={() => setFixed(true)}
       onBottomPassedReverse={() => setFixed(false)}
-      onOnScreen={()=>props.setActiveItem("aboutMe")}
+      onTopPassedReverse={()=>props.setActiveItem("aboutMe")}
     >
         <Ref innerRef={props.aboutMeRef}>
       <Segment
