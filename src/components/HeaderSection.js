@@ -17,6 +17,7 @@ const HeaderSection = (props) => {
       onBottomPassed={() => setFixed(true)}
       onBottomPassedReverse={() => setFixed(false)}
     >
+        <Ref innerRef={props.aboutMeRef}>
       <Segment
         vertical
         inverted
@@ -29,10 +30,9 @@ const HeaderSection = (props) => {
           experienceRef={props.experienceRef}
           projectsRef={props.projectsRef}
         />
-        <Ref innerRef={props.aboutMeRef}>
           <AboutMeSection />
-        </Ref>
       </Segment>
+        </Ref>
     </Visibility>
   )
 }
