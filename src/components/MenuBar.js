@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Container,
   Menu,
@@ -7,7 +7,19 @@ import {
 
 const MenuBar = (props) => {
   const { fixed, aboutMeRef, experienceRef, projectsRef } = props
+  const [activeItem, setActiveItem] = useState("aboutMe")
   const pdfFile = require('../../assets/cv.pdf')
+
+  const sectionRef = {
+    "aboutMe": aboutMeRef,
+    "experience": experienceRef,
+    "projects": projectsRef
+  }
+
+  const handleMenuClick = (name) => {
+    sectionRef[name].current.scrollIntoView()
+    setActiveItem(name)
+  }
 
   return (
     <Menu
@@ -18,9 +30,27 @@ const MenuBar = (props) => {
       size="large"
     >
       <Container>
-        <Menu.Item onClick={()=>aboutMeRef.current.scrollIntoView()}>About Me</Menu.Item>
-        <Menu.Item onClick={()=>experienceRef.current.scrollIntoView()}>Experience</Menu.Item>
-        <Menu.Item onClick={()=>projectsRef.current.scrollIntoView()}>Projects</Menu.Item>
+        <Menu.Item
+          name="aboutMe"
+          active={activeItem == "aboutMe"}
+          onClick={() => handleMenuClick("aboutMe")}
+        >
+          About Me
+        </Menu.Item>
+        <Menu.Item
+          name="experience"
+          active={activeItem == "experience"}
+          onClick={() => handleMenuClick("experience")}
+        >
+          Experience
+        </Menu.Item>
+        <Menu.Item
+          name="projects"
+          active={activeItem == "projects"}
+          onClick={() => handleMenuClick("projects")}
+        >
+          Projects
+        </Menu.Item>
         <Menu.Item position="right">
           <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
             Resumé
