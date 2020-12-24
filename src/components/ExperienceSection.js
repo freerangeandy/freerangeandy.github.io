@@ -2,7 +2,8 @@ import React from 'react'
 import {
   Grid,
   Segment,
-  Ref
+  Ref,
+  Visibility
 } from 'semantic-ui-react'
 import Experience from './Experience'
 
@@ -17,6 +18,11 @@ const ExperienceSection = (props) => {
       <h2 style={{ textAlign:'center', marginTop:'1.5em' }}>
         Experience
       </h2>
+      <Visibility
+        once={false}
+        onTopPassedReverse={()=>props.setActiveItem("experience")}
+        onTopPassed={()=>props.setActiveItem("projects")}
+      >
       <Grid columns='equal' centered divided>
         <Grid.Row>
           <Grid.Column>
@@ -67,6 +73,7 @@ const ExperienceSection = (props) => {
           </Grid.Column>
         </Grid.Row>
       </Grid>
+    </Visibility>
     </Segment>
   )
 }

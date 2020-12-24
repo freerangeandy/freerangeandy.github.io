@@ -22,8 +22,11 @@ const App = (props) => {
         activeItem={activeItem}
         setActiveItem={setActiveItem}
       />
-      <ExperienceSection experienceRef={experienceRef}/>
-      <ProjectsSection projectsRef={projectsRef}/>
+      <ExperienceSection
+        experienceRef={experienceRef}
+        setActiveItem={setActiveItem}
+      />
+      <ProjectsSection projectsRef={projectsRef} />
       <Segment vertical inverted color="violet">
         <Container>
 

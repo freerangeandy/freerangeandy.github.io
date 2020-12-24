@@ -11,31 +11,40 @@ import MenuBar from './MenuBar'
 const HeaderSection = (props) => {
   const [fixed, setFixed] = useState(false)
 
+  const onBottomPassed = () => {
+    props.setActiveItem("experience")
+    setFixed(true)
+  }
+
+  const onBottomPassedReverse = () => {
+    props.setActiveItem("aboutMe")
+    setFixed(false)
+  }
+
   return (
     <Visibility
       once={false}
-      onBottomPassed={() => setFixed(true)}
-      onBottomPassedReverse={() => setFixed(false)}
-      onTopPassedReverse={()=>props.setActiveItem("aboutMe")}
+      onBottomPassed={onBottomPassed}
+      onBottomPassedReverse={onBottomPassedReverse}
     >
-        <Ref innerRef={props.aboutMeRef}>
-      <Segment
-        vertical
-        inverted
-        color="violet"
-        style={{ minHeight: 350, padding: '0 0 1em 0'}}
-      >
-        <MenuBar
-          fixed={fixed}
-          aboutMeRef={props.aboutMeRef}
-          experienceRef={props.experienceRef}
-          projectsRef={props.projectsRef}
-          activeItem={props.activeItem}
-          setActiveItem={props.setActiveItem}
-        />
+      <Ref innerRef={props.aboutMeRef}>
+        <Segment
+          vertical
+          inverted
+          color="violet"
+          style={{ minHeight: 350, padding: '0 0 1em 0'}}
+        >
+          <MenuBar
+            fixed={fixed}
+            aboutMeRef={props.aboutMeRef}
+            experienceRef={props.experienceRef}
+            projectsRef={props.projectsRef}
+            activeItem={props.activeItem}
+            setActiveItem={props.setActiveItem}
+          />
           <AboutMeSection />
-      </Segment>
-        </Ref>
+        </Segment>
+      </Ref>
     </Visibility>
   )
 }
