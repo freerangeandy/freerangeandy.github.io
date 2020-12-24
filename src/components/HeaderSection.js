@@ -3,47 +3,48 @@ import {
   Visibility,
   Segment,
   Container,
-  Menu,
-  Button
+  Ref
 } from 'semantic-ui-react'
 import AboutMeSection from './AboutMeSection'
+import MenuBar from './MenuBar'
 
 const HeaderSection = (props) => {
   const [fixed, setFixed] = useState(false)
-  const pdfFile = require('../../assets/cv.pdf')
+
+  const onBottomPassed = () => {
+    props.setActiveItem("experience")
+    setFixed(true)
+  }
+
+  const onBottomPassedReverse = () => {
+    props.setActiveItem("aboutMe")
+    setFixed(false)
+  }
 
   return (
     <Visibility
       once={false}
-      onBottomPassed={() => setFixed(true)}
-      onBottomPassedReverse={() => setFixed(false)}
+      onBottomPassed={onBottomPassed}
+      onBottomPassedReverse={onBottomPassedReverse}
     >
-      <Segment
-        vertical
-        inverted
-        color="violet"
-        style={{ minHeight: 350, padding: '0 0 1em 0'}}
-      >
-        <Menu
-          fixed={fixed ? "top" : null}
-          inverted={!fixed}
-          secondary={!fixed}
-          pointing={!fixed}
-          size="large"
+      <Ref innerRef={props.aboutMeRef}>
+        <Segment
+          vertical
+          inverted
+          color="violet"
+          style={{ minHeight: 350, padding: '0 0 1em 0'}}
         >
-          <Container>
-            <Menu.Item as="a" active>About Me</Menu.Item>
-            <Menu.Item as="a">Experience</Menu.Item>
-            <Menu.Item as="a">Projects</Menu.Item>
-            <Menu.Item position="right">
-              <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
-                Resumé
-              </Button>
-            </Menu.Item>
-          </Container>
-        </Menu>
-        <AboutMeSection />
-      </Segment>
+          <MenuBar
+            fixed={fixed}
+            aboutMeRef={props.aboutMeRef}
+            experienceRef={props.experienceRef}
+            projectsRef={props.projectsRef}
+            activeItem={props.activeItem}
+            setActiveItem={props.setActiveItem}
+          />
+          <AboutMeSection />
+        </Segment>
+      </Ref>
     </Visibility>
   )
 }
