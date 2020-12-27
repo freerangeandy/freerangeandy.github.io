@@ -1,10 +1,38 @@
 {
   "experience": {
     "work": [
-      "hi"
+      {
+        "name": "Waltham Public Schools",
+        "location": "Waltham, MA",
+        "title": "High School Math Teacher",
+        "date": ["Oct. 2018", "Mar. 2019"]
+      },
+      {
+        "name": "Somerville Public Schools",
+        "location": "Somerville, MA",
+        "title": "High School Math Teacher",
+        "date": ["Feb. 2017", "June 2018"]
+      },
+      {
+        "name": "Variable Annuity Life Insurance Company (VALIC)",
+        "location": "Boston, MA",
+        "title": "Programmer Analyst",
+        "date": ["Feb. 2008", "Apr. 2015"]
+      }
     ],
     "education": [
-
+      {
+        "name": "Launch Academy",
+        "location": "Boston, MA",
+        "title": "Apprentice Full-Stack Developer",
+        "date": ["Dec. 2019", "May 2020"]
+      },
+      {
+        "name": "Massachusetts Institute of Technology",
+        "location": "Cambridge, MA",
+        "degree": "Bachelor of Science - Mathematics",
+        "date": ["Sept. 2003", "June 2007"]
+      }
     ]
   },
   "projects": {

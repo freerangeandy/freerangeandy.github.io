@@ -6,6 +6,7 @@ import {
 import HeaderSection from './components/HeaderSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
+import content from './content.json'
 
 const App = (props) => {
   const aboutMeRef = useRef(null)
@@ -25,8 +26,12 @@ const App = (props) => {
       <ExperienceSection
         experienceRef={experienceRef}
         setActiveItem={setActiveItem}
+        items={content.experience}
       />
-      <ProjectsSection projectsRef={projectsRef} />
+      <ProjectsSection
+        projectsRef={projectsRef}
+        items={content.projects}
+      />
       <Segment vertical inverted color="violet">
         <Container>
 

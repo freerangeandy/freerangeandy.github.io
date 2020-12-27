@@ -5,7 +5,6 @@ import {
   Ref
 } from 'semantic-ui-react'
 import Project from './Project'
-import content from '../content.json'
 
 const ProjectSection = (props) => {
   const cellBlocksPNG = require('../../assets/screenshots/cell_blocks.png')
@@ -15,7 +14,7 @@ const ProjectSection = (props) => {
   const tabLoomPNG = require('../../assets/screenshots/tab_loom.png')
   const ffRealityPNG = require('../../assets/screenshots/ff_reality.png')
   const weatherPNG = require('../../assets/screenshots/many_city_weather.png')
-  console.log(content.experience.work[0])
+
   return (
     <Segment
       vertical
