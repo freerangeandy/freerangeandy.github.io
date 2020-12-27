@@ -38,7 +38,7 @@ const ExperienceSection = (props) => {
         onTopPassed={()=>props.setActiveItem("projects")}
       >
       <Grid columns='equal' centered divided>
-        <Grid.Row>
+        <Grid.Row only='tablet computer'>
           <Grid.Column>
             <Segment
               basic
@@ -52,6 +52,26 @@ const ExperienceSection = (props) => {
             <Segment
               basic
               style={{ marginLeft:'10%'}}
+            >
+              <h3>Education</h3>
+              {educationExperience}
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row only='mobile'>
+          <Grid.Column>
+            <Segment
+              basic
+            >
+              <h3>Work</h3>
+              {workExperience}
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row only='mobile'>
+          <Grid.Column>
+            <Segment
+              basic
             >
               <h3>Education</h3>
               {educationExperience}
