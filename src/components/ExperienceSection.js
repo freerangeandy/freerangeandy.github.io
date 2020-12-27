@@ -8,6 +8,20 @@ import {
 import Experience from './Experience'
 
 const ExperienceSection = (props) => {
+  const populateExperience = (item,idx) => (
+    <Experience
+      key={idx}
+      name={item.name}
+      location={item.location}
+      title={item.title}
+      degree={item.degree}
+      date={{ start: item.date[0], end: item.date[1] }}
+    />
+  )
+
+  const workExperience = props.items.work.map(populateExperience)
+  const educationExperience = props.items.education.map(populateExperience)
+  
   return (
     <Segment vertical style={{ paddingTop: '0'}}>
       <Segment vertical inverted color="violet">
@@ -31,24 +45,7 @@ const ExperienceSection = (props) => {
               style={{ float:'right'}}
             >
               <h3>Work</h3>
-              <Experience
-                name="Waltham Public Schools"
-                location="Waltham, MA"
-                title="High School Math Teacher"
-                date={{ start: "Oct. 2018", end: "Mar. 2019" }}
-              />
-              <Experience
-                name="Somerville Public Schools"
-                location="Somerville, MA"
-                title="High School Math Teacher"
-                date={{ start: "Feb. 2017", end: "June 2018" }}
-              />
-              <Experience
-                name="Variable Annuity Life Insurance Company (VALIC)"
-                location="Boston, MA"
-                title="Programmer Analyst"
-                date={{ start: "Feb. 2008", end: "Apr. 2015" }}
-              />
+              {workExperience}
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -57,18 +54,7 @@ const ExperienceSection = (props) => {
               style={{ marginLeft:'10%'}}
             >
               <h3>Education</h3>
-              <Experience
-                name="Launch Academy"
-                title="Apprentice Full-Stack Developer"
-                location="Boston, MA"
-                date={{ start: "Dec. 2019", end: "May 2020" }}
-              />
-              <Experience
-                name="Massachusetts Institute of Technology"
-                location="Cambridge, MA"
-                degree="Bachelor of Science - Mathematics"
-                date={{ start: "Sept. 2003", end: "June 2007" }}
-              />
+              {educationExperience}
             </Segment>
           </Grid.Column>
         </Grid.Row>

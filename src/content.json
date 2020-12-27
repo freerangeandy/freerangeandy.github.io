@@ -1,0 +1,96 @@
+{
+  "experience": {
+    "work": [
+      {
+        "name": "Waltham Public Schools",
+        "location": "Waltham, MA",
+        "title": "High School Math Teacher",
+        "date": ["Oct. 2018", "Mar. 2019"]
+      },
+      {
+        "name": "Somerville Public Schools",
+        "location": "Somerville, MA",
+        "title": "High School Math Teacher",
+        "date": ["Feb. 2017", "June 2018"]
+      },
+      {
+        "name": "Variable Annuity Life Insurance Company (VALIC)",
+        "location": "Boston, MA",
+        "title": "Programmer Analyst",
+        "date": ["Feb. 2008", "Apr. 2015"]
+      }
+    ],
+    "education": [
+      {
+        "name": "Launch Academy",
+        "location": "Boston, MA",
+        "title": "Apprentice Full-Stack Developer",
+        "date": ["Dec. 2019", "May 2020"]
+      },
+      {
+        "name": "Massachusetts Institute of Technology",
+        "location": "Cambridge, MA",
+        "degree": "Bachelor of Science - Mathematics",
+        "date": ["Sept. 2003", "June 2007"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "Tab Loom",
+      "description": "Virtual sketchbook for creating guitar tablature",
+      "screenshot": "tab_loom",
+      "siteurl": "https://tab-loom.herokuapp.com/",
+      "gitrepo": "https://github.com/freerangeandy/tab-loom",
+      "labels": ["JavaScript","React","Ruby on Rails","PostgreSQL","Sass","API"]
+    },
+    {
+      "name": "Game Review Hero",
+      "description": "Social website for users to post reviews for video games",
+      "screenshot": "game_review_hero",
+      "siteurl": "https://gamereviewhero.herokuapp.com/",
+      "gitrepo": "https://github.com/freerangeandy/video-game-reviews",
+      "labels": ["JavaScript","React","Ruby on Rails","PostgreSQL","Team project"]
+    },
+    {
+      "name": "MyCalculator",
+      "description": "Scientific calculator with media-responsive layout",
+      "screenshot": "mycalculator",
+      "siteurl": "https://my-calculator-d4e79.firebaseapp.com/",
+      "gitrepo": "https://github.com/freerangeandy/mycalculator",
+      "labels": ["JavaScript","React","MaterialUI","Responsive"]
+    },
+    {
+      "name": "Many City Weather",
+      "description": "Hourly weather forecast comparison between cities",
+      "screenshot": "many_city_weather",
+      "siteurl": "https://freerangeandy.github.io/many-city-weather/",
+      "gitrepo": "https://github.com/freerangeandy/many-city-weather",
+      "labels": ["JavaScript","React","API","Hackathon"]
+    },
+    {
+      "name": "Flippie Bird",
+      "description": "Arcade game inspired by Flappy Bird",
+      "screenshot": "flippie_bird",
+      "siteurl": "https://freerangeandy.github.io/flippie-bird/",
+      "gitrepo": "https://github.com/freerangeandy/flippie-bird/",
+      "labels": ["JavaScript","PhaserJS","Game","Hackathon"]
+    },
+    {
+      "name": "Cell Blocks",
+      "description": "Cellular automata sandbox (Conway's Game of Life)",
+      "screenshot": "cell_blocks",
+      "siteurl": "https://freerangeandy.github.io/cell-blocks/",
+      "gitrepo": "https://github.com/freerangeandy/cell-blocks",
+      "labels": ["JavaScript","HTML5"]
+    },
+    {
+      "name": "Fantasy Football Reality 2020",
+      "description": "Compare weekly fantasy football projections vs. actual results",
+      "screenshot": "ff_reality",
+      "siteurl": "https://ff-reality.herokuapp.com/",
+      "gitrepo": "https://github.com/freerangeandy/ff-reality",
+      "labels": ["Python","Flask","pandas","Web-scraping"]
+    }
+  ]
+}

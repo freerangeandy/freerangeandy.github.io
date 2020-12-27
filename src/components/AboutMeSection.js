@@ -31,21 +31,13 @@ const AboutMeSection = (props) => {
               color='violet'
               style={{ textAlign:'left', marginLeft:'15%'}}
             >
-            <h3>Skills</h3>
-            <List bulleted>
-              <List.Item>
-                <List.Content>JavaScript</List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Content>ReactJS</List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Content>Ruby on Rails</List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Content>Python</List.Content>
-              </List.Item>
-            </List>
+              <h3>Skills</h3>
+              <List bulleted>
+                <List.Item>JavaScript</List.Item>
+                <List.Item>ReactJS</List.Item>
+                <List.Item>Ruby on Rails</List.Item>
+                <List.Item>Python</List.Item>
+              </List>
             </Segment>
           </Grid.Column>
           <Grid.Column width={4}>
@@ -54,21 +46,21 @@ const AboutMeSection = (props) => {
               color='violet'
               style={{ textAlign:'left',  marginLeft:'15%'}}
             >
-            <h3>Interests</h3>
-            <List>
-              <List.Item>
-                <Icon link name='lab' />
-                <List.Content>&nbsp;STEM Education</List.Content>
-              </List.Item>
-              <List.Item>
-                <Icon link name='leaf' />
-                <List.Content>Sustainable Tech</List.Content>
-              </List.Item>
-              <List.Item>
-                <Icon link name='subway' />
-                <List.Content>&nbsp;Public Policy</List.Content>
-              </List.Item>
-            </List>
+              <h3>Interests</h3>
+              <List>
+                <List.Item>
+                  <Icon link name='lab' />
+                  <List.Content>&nbsp;STEM Education</List.Content>
+                </List.Item>
+                <List.Item>
+                  <Icon link name='leaf' />
+                  <List.Content>Sustainable Tech</List.Content>
+                </List.Item>
+                <List.Item>
+                  <Icon link name='subway' />
+                  <List.Content>&nbsp;Public Policy</List.Content>
+                </List.Item>
+              </List>
             </Segment>
           </Grid.Column>
         </Grid.Row>
