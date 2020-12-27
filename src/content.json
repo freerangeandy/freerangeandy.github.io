@@ -39,7 +39,7 @@
     {
       "name": "Tab Loom",
       "description": "Virtual sketchbook for creating guitar tablature",
-      "screenshot": "tab_loom.png",
+      "screenshot": "tab_loom",
       "siteurl": "https://tab-loom.herokuapp.com/",
       "gitrepo": "https://github.com/freerangeandy/tab-loom",
       "labels": ["JavaScript","React","Ruby on Rails","PostgreSQL","Sass","API"]
@@ -47,7 +47,7 @@
     {
       "name": "Game Review Hero",
       "description": "Social website for users to post reviews for video games",
-      "screenshot": "game_review_hero.png",
+      "screenshot": "game_review_hero",
       "siteurl": "https://gamereviewhero.herokuapp.com/",
       "gitrepo": "https://github.com/freerangeandy/video-game-reviews",
       "labels": ["JavaScript","React","Ruby on Rails","PostgreSQL","Team project"]
@@ -55,7 +55,7 @@
     {
       "name": "MyCalculator",
       "description": "Scientific calculator with media-responsive layout",
-      "screenshot": "mycalculator.png",
+      "screenshot": "mycalculator",
       "siteurl": "https://my-calculator-d4e79.firebaseapp.com/",
       "gitrepo": "https://github.com/freerangeandy/mycalculator",
       "labels": ["JavaScript","React","MaterialUI","Responsive"]
@@ -63,7 +63,7 @@
     {
       "name": "Many City Weather",
       "description": "Hourly weather forecast comparison between cities",
-      "screenshot": "many_city_weather.png",
+      "screenshot": "many_city_weather",
       "siteurl": "https://freerangeandy.github.io/many-city-weather/",
       "gitrepo": "https://github.com/freerangeandy/many-city-weather",
       "labels": ["JavaScript","React","API","Hackathon"]
@@ -71,7 +71,7 @@
     {
       "name": "Flippie Bird",
       "description": "Arcade game inspired by Flappy Bird",
-      "screenshot": "flippie_bird.png",
+      "screenshot": "flippie_bird",
       "siteurl": "https://freerangeandy.github.io/flippie-bird/",
       "gitrepo": "https://github.com/freerangeandy/flippie-bird/",
       "labels": ["JavaScript","PhaserJS","Game","Hackathon"]
@@ -79,7 +79,7 @@
     {
       "name": "Cell Blocks",
       "description": "Cellular automata sandbox (Conway's Game of Life)",
-      "screenshot": "cell_blocks.png",
+      "screenshot": "cell_blocks",
       "siteurl": "https://freerangeandy.github.io/cell-blocks/",
       "gitrepo": "https://github.com/freerangeandy/cell-blocks",
       "labels": ["JavaScript","HTML5"]
@@ -87,7 +87,7 @@
     {
       "name": "Fantasy Football Reality 2020",
       "description": "Compare weekly fantasy football projections vs. actual results",
-      "screenshot": "ff_reality.png",
+      "screenshot": "ff_reality",
       "siteurl": "https://ff-reality.herokuapp.com/",
       "gitrepo": "https://github.com/freerangeandy/ff-reality",
       "labels": ["Python","Flask","pandas","Web-scraping"]
