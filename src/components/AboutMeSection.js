@@ -45,9 +45,11 @@ const AboutMeSection = (props) => {
           <Icon name='github' /> GitHub
         </List.Item>
       </List>
-      <p style={{ marginTop:'0.5em' }}>
-        Web developer &nbsp;&nbsp;<Icon name='cog' />&nbsp; Math educator<br/>
-        Currently:&nbsp; <i>Looking for a role as a <strong>full-stack</strong> or <strong>front-end software engineer</strong></i>
+      <h4 style={{ marginTop:'0.5em', marginBottom:'0.3em' }}>
+        Web developer &nbsp;&nbsp;<Icon name='cog' />&nbsp; Math educator
+      </h4>
+      <p>
+         <i>Currently:&nbsp;</i> Looking for a role as a <strong>full-stack</strong> or <strong>front-end software engineer</strong>
       </p>
       <Grid centered relaxed>
         <Grid.Row>
