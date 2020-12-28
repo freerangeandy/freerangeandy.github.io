@@ -51,12 +51,13 @@ const AboutMeSection = (props) => {
       </p>
       <Grid centered relaxed>
         <Grid.Row>
-          <Grid.Column only="computer" width={2}></Grid.Column>
-
-          <Grid.Column mobile={6} tablet={4} computer={4}>
+          <Grid.Column only="tablet" width={1}></Grid.Column>
+          <Grid.Column only="computer" width={1}></Grid.Column>
+          <Grid.Column mobile={7} tablet={4} computer={3}>
             <Segment
               inverted
               color='violet'
+              vertical
               style={{ display:"flex", justifyContent:"flex-end" }}
             >
               <Container>
@@ -65,10 +66,11 @@ const AboutMeSection = (props) => {
               </Container>
             </Segment>
           </Grid.Column>
-          <Grid.Column mobile={7} tablet={4} computer={4}>
+          <Grid.Column mobile={7} tablet={4} computer={3}>
             <Segment
               inverted
               color='violet'
+              vertical
             >
               <h3>Interests</h3>
               {interestsList}
