@@ -8,6 +8,32 @@ import {
 } from 'semantic-ui-react'
 
 const AboutMeSection = (props) => {
+  const skillsList = (
+    <List bulleted>
+      <List.Item>JavaScript</List.Item>
+      <List.Item>ReactJS</List.Item>
+      <List.Item>Ruby&nbsp;on&nbsp;Rails</List.Item>
+      <List.Item>Python</List.Item>
+    </List>
+  )
+
+  const interestsList = (
+    <List>
+      <List.Item>
+        <Icon link name='lab' />
+        <List.Content>&nbsp;STEM&nbsp;Education</List.Content>
+      </List.Item>
+      <List.Item>
+        <Icon link name='leaf' />
+        <List.Content>Sustainable&nbsp;Tech</List.Content>
+      </List.Item>
+      <List.Item>
+        <Icon link name='subway' />
+        <List.Content>&nbsp;Public&nbsp;Policy</List.Content>
+      </List.Item>
+    </List>
+  )
+
   return (
     <Container textAlign='center'>
       <h1 style={{ marginBottom:'0' }}>Andy Lee</h1>
@@ -29,38 +55,20 @@ const AboutMeSection = (props) => {
             <Segment
               inverted
               color='violet'
-              style={{ textAlign:'left', marginLeft:'15%'}}
+              style={{ textAlign:'left', marginLeft:'15%' }}
             >
               <h3>Skills</h3>
-              <List bulleted>
-                <List.Item>JavaScript</List.Item>
-                <List.Item>ReactJS</List.Item>
-                <List.Item>Ruby on Rails</List.Item>
-                <List.Item>Python</List.Item>
-              </List>
+              {skillsList}
             </Segment>
           </Grid.Column>
           <Grid.Column width={4}>
             <Segment
               inverted
               color='violet'
-              style={{ textAlign:'left',  marginLeft:'15%'}}
+              style={{ textAlign:'left', marginLeft:'15%' }}
             >
               <h3>Interests</h3>
-              <List>
-                <List.Item>
-                  <Icon link name='lab' />
-                  <List.Content>&nbsp;STEM Education</List.Content>
-                </List.Item>
-                <List.Item>
-                  <Icon link name='leaf' />
-                  <List.Content>Sustainable Tech</List.Content>
-                </List.Item>
-                <List.Item>
-                  <Icon link name='subway' />
-                  <List.Content>&nbsp;Public Policy</List.Content>
-                </List.Item>
-              </List>
+              {interestsList}
             </Segment>
           </Grid.Column>
         </Grid.Row>
