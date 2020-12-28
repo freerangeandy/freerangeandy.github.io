@@ -46,8 +46,8 @@ const AboutMeSection = (props) => {
         </List.Item>
       </List>
       <p style={{ marginTop:'0.5em' }}>
-        Experienced programmer &nbsp;&nbsp;<Icon name='cog' />&nbsp; Math educator &nbsp;&nbsp;<Icon name='cog' />&nbsp; Boot camp graduate<br/>
-        Currently looking for a role as a <i>full-stack</i> or <i>front-end software developer</i>
+        Web developer &nbsp;&nbsp;<Icon name='cog' />&nbsp; Math educator<br/>
+        Currently:&nbsp; <i>Looking for a role as a <strong>full-stack</strong> or <strong>front-end software engineer</strong></i>
       </p>
       <Grid centered relaxed>
         <Grid.Row>
