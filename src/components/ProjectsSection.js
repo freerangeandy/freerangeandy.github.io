@@ -33,7 +33,7 @@ const ProjectSection = (props) => {
         <h2 style={{ height:'1.3em' }}></h2>
       </Ref>
       <h2 style={{ textAlign:'center' }}>Projects</h2>
-      <Card.Group itemsPerRow={3}>
+      <Card.Group itemsPerRow={3} doubling stackable style={{ paddingTop: '1em' }}>
         {projects}
       </Card.Group>
     </Segment>
