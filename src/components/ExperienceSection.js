@@ -8,7 +8,7 @@ import {
 import Experience from './Experience'
 
 const ExperienceSection = (props) => {
-  const populateExperience = (item,idx) => (
+  const populateExperience = (mobile) => (item,idx) => (
     <Experience
       key={idx}
       name={item.name}
@@ -16,12 +16,13 @@ const ExperienceSection = (props) => {
       title={item.title}
       degree={item.degree}
       date={{ start: item.date[0], end: item.date[1] }}
+      mobile={mobile}
     />
   )
 
-  const workExperience = props.items.work.map(populateExperience)
-  const educationExperience = props.items.education.map(populateExperience)
-  
+  const workExperience = (mobile) => props.items.work.map(populateExperience(mobile))
+  const educationExperience = (mobile) => props.items.education.map(populateExperience(mobile))
+
   return (
     <Segment vertical style={{ paddingTop: '0'}}>
       <Segment vertical inverted color="violet">
@@ -45,7 +46,7 @@ const ExperienceSection = (props) => {
               style={{ float:'right'}}
             >
               <h3>Work</h3>
-              {workExperience}
+              {workExperience(false)}
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -54,27 +55,27 @@ const ExperienceSection = (props) => {
               style={{ marginLeft:'10%'}}
             >
               <h3>Education</h3>
-              {educationExperience}
+              {educationExperience(false)}
             </Segment>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row only='mobile'>
+        <Grid.Row only='mobile' style={{ paddingBottom: "0" }}>
           <Grid.Column>
             <Segment
               basic
             >
               <h3>Work</h3>
-              {workExperience}
+              {workExperience(true)}
             </Segment>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row only='mobile'>
+        <Grid.Row only='mobile' style={{ paddingTop: "0" }}>
           <Grid.Column>
             <Segment
               basic
             >
               <h3>Education</h3>
-              {educationExperience}
+              {educationExperience(true)}
             </Segment>
           </Grid.Column>
         </Grid.Row>
