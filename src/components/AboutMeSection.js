@@ -9,7 +9,7 @@ import {
 
 const AboutMeSection = (props) => {
   const skillsList = (
-    <List bulleted>
+    <List bulleted style={{ textAlign:'left'}}>
       <List.Item>JavaScript</List.Item>
       <List.Item>ReactJS</List.Item>
       <List.Item>Ruby&nbsp;on&nbsp;Rails</List.Item>
@@ -18,7 +18,7 @@ const AboutMeSection = (props) => {
   )
 
   const interestsList = (
-    <List>
+    <List style={{ textAlign:'left'}}>
       <List.Item>
         <Icon link name='lab' />
         <List.Content>&nbsp;STEM&nbsp;Education</List.Content>
@@ -51,21 +51,45 @@ const AboutMeSection = (props) => {
       </p>
       <Grid centered relaxed>
         <Grid.Row>
-          <Grid.Column width={4}>
+          <Grid.Column only="computer" width={1}></Grid.Column>
+          <Grid.Column only="largeScreen" width={1}></Grid.Column>
+          <Grid.Column only="tablet computer" width={4}>
             <Segment
               inverted
               color='violet'
-              style={{ textAlign:'left', marginLeft:'15%' }}
+              style={{ }}
             >
-              <h3>Skills</h3>
-              {skillsList}
+              <Container>
+                <h3>Skills</h3>
+                {skillsList}
+              </Container>
             </Segment>
           </Grid.Column>
-          <Grid.Column width={4}>
+          <Grid.Column only="tablet computer" width={4}>
             <Segment
               inverted
               color='violet'
-              style={{ textAlign:'left', marginLeft:'15%' }}
+            >
+              <h3>Interests</h3>
+              {interestsList}
+            </Segment>
+          </Grid.Column>
+          <Grid.Column only="mobile" width={6}>
+            <Segment
+              inverted
+              color='violet'
+              style={{ display:"flex", justifyContent:"flex-end" }}
+            >
+              <Container>
+                <h3>Skills</h3>
+                {skillsList}
+              </Container>
+            </Segment>
+          </Grid.Column>
+          <Grid.Column only="mobile" width={7}>
+            <Segment
+              inverted
+              color='violet'
             >
               <h3>Interests</h3>
               {interestsList}
