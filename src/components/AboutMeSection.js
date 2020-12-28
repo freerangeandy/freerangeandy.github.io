@@ -51,30 +51,9 @@ const AboutMeSection = (props) => {
       </p>
       <Grid centered relaxed>
         <Grid.Row>
-          <Grid.Column only="computer" width={1}></Grid.Column>
-          <Grid.Column only="largeScreen" width={1}></Grid.Column>
-          <Grid.Column only="tablet computer" width={4}>
-            <Segment
-              inverted
-              color='violet'
-              style={{ }}
-            >
-              <Container>
-                <h3>Skills</h3>
-                {skillsList}
-              </Container>
-            </Segment>
-          </Grid.Column>
-          <Grid.Column only="tablet computer" width={4}>
-            <Segment
-              inverted
-              color='violet'
-            >
-              <h3>Interests</h3>
-              {interestsList}
-            </Segment>
-          </Grid.Column>
-          <Grid.Column only="mobile" width={6}>
+          <Grid.Column only="computer" width={2}></Grid.Column>
+
+          <Grid.Column mobile={6} tablet={4} computer={4}>
             <Segment
               inverted
               color='violet'
@@ -86,7 +65,7 @@ const AboutMeSection = (props) => {
               </Container>
             </Segment>
           </Grid.Column>
-          <Grid.Column only="mobile" width={7}>
+          <Grid.Column mobile={7} tablet={4} computer={4}>
             <Segment
               inverted
               color='violet'
