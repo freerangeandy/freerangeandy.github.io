@@ -59,21 +59,17 @@ const ExperienceSection = (props) => {
             </Segment>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row only='mobile' style={{ paddingBottom: "0" }}>
+        <Grid.Row only='mobile' centered style={{ maxWidth: "500px", paddingBottom: "0" }}>
           <Grid.Column>
-            <Segment
-              basic
-            >
+            <Segment basic>
               <h3>Work</h3>
               {workExperience(true)}
             </Segment>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row only='mobile' style={{ paddingTop: "0" }}>
+        <Grid.Row only='mobile' centered style={{ maxWidth: "500px", paddingTop: "0" }}>
           <Grid.Column>
-            <Segment
-              basic
-            >
+            <Segment basic>
               <h3>Education</h3>
               {educationExperience(true)}
             </Segment>
