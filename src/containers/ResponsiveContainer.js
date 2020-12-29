@@ -15,16 +15,24 @@ const ResponsiveContainer = (props) => {
   return (
     <MediaContextProvider>
       <DesktopContainer
+        mediaWrapper={Media}
         aboutMeRef={props.aboutMeRef}
         experienceRef={props.experienceRef}
         projectsRef={props.projectsRef}
         activeItem={props.activeItem}
         setActiveItem={props.setActiveItem}
       >
-        <Media greaterThan='mobile'>{props.children}</Media>
+        {props.children}
       </DesktopContainer>
-      <MobileContainer>
-        <Media at='mobile'>{props.children}</Media>
+      <MobileContainer
+        mediaWrapper={Media}
+        aboutMeRef={props.aboutMeRef}
+        experienceRef={props.experienceRef}
+        projectsRef={props.projectsRef}
+        activeItem={props.activeItem}
+        setActiveItem={props.setActiveItem}
+      >
+        {props.children}
       </MobileContainer>
     </MediaContextProvider>
   )

@@ -10,6 +10,7 @@ import MenuBar from '../components/MenuBar'
 
 const DesktopContainer = (props) => {
   const [fixed, setFixed] = useState(false)
+  const Media = props.mediaWrapper
 
   const onBottomPassed = () => {
     props.setActiveItem("experience")
@@ -22,7 +23,7 @@ const DesktopContainer = (props) => {
   }
 
   return (
-    <Fragment>
+    <Media greaterThan='mobile'>
       <Visibility
         once={false}
         onBottomPassed={onBottomPassed}
@@ -48,7 +49,7 @@ const DesktopContainer = (props) => {
         </Ref>
       </Visibility>
       {props.children}
-    </Fragment>
+    </Media>
   )
 }
 
