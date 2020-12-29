@@ -40,29 +40,27 @@ const MobileContainer = (props) => {
           vertical
           visible={opened}
         >
-          <Container>
-            <Menu.Item
-              name="aboutMe"
-              active={props.activeItem == "aboutMe"}
-              onClick={() => handleMenuClick("aboutMe")}
-            >
-              About Me
-            </Menu.Item>
-            <Menu.Item
-              name="experience"
-              active={props.activeItem == "experience"}
-              onClick={() => handleMenuClick("experience")}
-            >
-              Experience
-            </Menu.Item>
-            <Menu.Item
-              name="projects"
-              active={props.activeItem == "projects"}
-              onClick={() => handleMenuClick("projects")}
-            >
-              Projects
-            </Menu.Item>
-          </Container>
+          <Menu.Item
+            name="aboutMe"
+            active={props.activeItem == "aboutMe"}
+            onClick={() => handleMenuClick("aboutMe")}
+          >
+            About Me
+          </Menu.Item>
+          <Menu.Item
+            name="experience"
+            active={props.activeItem == "experience"}
+            onClick={() => handleMenuClick("experience")}
+          >
+            Experience
+          </Menu.Item>
+          <Menu.Item
+            name="projects"
+            active={props.activeItem == "projects"}
+            onClick={() => handleMenuClick("projects")}
+          >
+            Projects
+          </Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={opened}>
