@@ -22,6 +22,8 @@ const MobileContainer = (props) => {
     "projects": props.projectsRef
   }
 
+  const onBottomPassed = () => { props.setActiveItem("experience") }
+  const onBottomPassedReverse = () => { props.setActiveItem("aboutMe") }
   const handleSidebarHide = () => { setOpened(false) }
   const handleSidebarToggle = () => { setOpened(true) }
   const handleMenuClick = (name) => {
@@ -64,33 +66,39 @@ const MobileContainer = (props) => {
         </Sidebar>
 
         <Sidebar.Pusher dimmed={opened}>
-          <Ref innerRef={props.aboutMeRef}>
-            <Segment
-              vertical
-              inverted
-              color="violet"
-              style={{ minHeight: 350, padding: '0 0 1em 0'}}
-            >
-              <Menu
+          <Visibility
+            once={false}
+            onBottomPassed={onBottomPassed}
+            onBottomPassedReverse={onBottomPassedReverse}
+          >
+            <Ref innerRef={props.aboutMeRef}>
+              <Segment
+                vertical
                 inverted
-                secondary
-                size="large"
+                color="violet"
+                style={{ minHeight: 350, padding: '0 0 1em 0'}}
               >
-                <Menu.Item
-                  position="left"
-                  onClick={handleSidebarToggle}
+                <Menu
+                  inverted
+                  secondary
+                  size="large"
                 >
-                  <Icon name='sidebar' />
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" href={pdfFile} target="blank" inverted>
-                    Resumé
-                  </Button>
-                </Menu.Item>
-              </Menu>
-              <AboutMeSection />
-            </Segment>
-          </Ref>
+                  <Menu.Item
+                    position="left"
+                    onClick={handleSidebarToggle}
+                  >
+                    <Icon name='sidebar' />
+                  </Menu.Item>
+                  <Menu.Item position="right">
+                    <Button as="a" href={pdfFile} target="blank" inverted>
+                      Resumé
+                    </Button>
+                  </Menu.Item>
+                </Menu>
+                <AboutMeSection />
+              </Segment>
+            </Ref>
+          </Visibility>
           {props.children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>
