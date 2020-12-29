@@ -4,7 +4,6 @@ import {
   Container
 } from 'semantic-ui-react'
 import ResponsiveContainer from './containers/ResponsiveContainer'
-import HeaderSection from './components/HeaderSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
 import content from './content.json'
@@ -16,14 +15,13 @@ const App = (props) => {
   const [activeItem, setActiveItem] = useState("aboutMe")
 
   return (
-    <ResponsiveContainer>
-      <HeaderSection
-        aboutMeRef={aboutMeRef}
-        experienceRef={experienceRef}
-        projectsRef={projectsRef}
-        activeItem={activeItem}
-        setActiveItem={setActiveItem}
-      />
+    <ResponsiveContainer
+      aboutMeRef={aboutMeRef}
+      experienceRef={experienceRef}
+      projectsRef={projectsRef}
+      activeItem={activeItem}
+      setActiveItem={setActiveItem}
+    >
       <ExperienceSection
         experienceRef={experienceRef}
         setActiveItem={setActiveItem}
