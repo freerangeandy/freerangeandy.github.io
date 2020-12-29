@@ -6,16 +6,22 @@ import DesktopContainer from './DesktopContainer'
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
     mobile: 0,
-    table: 768,
+    tablet: 768,
     computer: 1024
   }
 })
 
 const ResponsiveContainer = ({ children }) => {
-  <MediaContextProvider>
-    <MobileContainer>{children}</MobileContainer>
-    <DesktopContainer>{children}</DesktopContainer>
-  </MediaContextProvider>
+  return (
+    <MediaContextProvider>
+      <DesktopContainer>
+        <Media greaterThan='mobile'>{children}</Media>
+      </DesktopContainer>
+      <MobileContainer>
+        <Media at='mobile'>{children}</Media>
+      </MobileContainer>
+    </MediaContextProvider>
+  )
 }
 
 export default ResponsiveContainer

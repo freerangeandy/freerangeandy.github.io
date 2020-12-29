@@ -3,6 +3,7 @@ import {
   Segment,
   Container
 } from 'semantic-ui-react'
+import ResponsiveContainer from './containers/ResponsiveContainer'
 import HeaderSection from './components/HeaderSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
@@ -15,7 +16,7 @@ const App = (props) => {
   const [activeItem, setActiveItem] = useState("aboutMe")
 
   return (
-    <Fragment>
+    <ResponsiveContainer>
       <HeaderSection
         aboutMeRef={aboutMeRef}
         experienceRef={experienceRef}
@@ -37,7 +38,7 @@ const App = (props) => {
 
         </Container>
       </Segment>
-    </Fragment>
+    </ResponsiveContainer>
   )
 }
 
