@@ -40,6 +40,7 @@ const MobileContainer = (props) => {
           inverted
           onHide={handleSidebarHide}
           vertical
+          width='thin'
           visible={opened}
         >
           <Menu.Item
