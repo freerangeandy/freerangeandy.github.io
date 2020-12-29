@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 
-const MobileContainer = (props) => {
+const DesktopContainer = (props) => {
   return (
     <Fragment>{props.children}</Fragment>
   )
 }
 
-export default MobileContainer
+export default DesktopContainer
