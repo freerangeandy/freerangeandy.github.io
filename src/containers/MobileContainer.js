@@ -30,8 +30,8 @@ const MobileContainer = (props) => {
   }
 
   return (
-    <Media as={Sidebar.Pushable} at='mobile'>
-      <Sidebar.Pushable>
+    <Media at='mobile'>
+      <Sidebar.Pushable style={{ transform: 'none' }}>
         <Sidebar
           as={Menu}
           animation='overlay'
