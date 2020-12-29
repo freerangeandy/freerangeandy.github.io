@@ -23,6 +23,16 @@ const ExperienceSection = (props) => {
   const workExperience = (mobile) => props.items.work.map(populateExperience(mobile))
   const educationExperience = (mobile) => props.items.education.map(populateExperience(mobile))
 
+  const educationHeader = (
+    <Visibility
+      once={false}
+      onTopPassedReverse={()=>props.setActiveItem("experience")}
+      onTopPassed={()=>props.setActiveItem("projects")}
+    >
+      <h3>Education</h3>
+    </Visibility>
+  )
+
   return (
     <Segment vertical style={{ paddingTop: '0'}}>
       <Segment vertical inverted color="violet">
@@ -33,11 +43,6 @@ const ExperienceSection = (props) => {
       <h2 style={{ textAlign:'center', marginTop:'1.5em' }}>
         Experience
       </h2>
-      <Visibility
-        once={false}
-        onTopPassedReverse={()=>props.setActiveItem("experience")}
-        onTopPassed={()=>props.setActiveItem("projects")}
-      >
       <Grid columns='equal' centered divided>
         <Grid.Row only='tablet computer'>
           <Grid.Column>
@@ -54,7 +59,7 @@ const ExperienceSection = (props) => {
               basic
               style={{ marginLeft:'10%'}}
             >
-              <h3>Education</h3>
+              {educationHeader}
               {educationExperience(false)}
             </Segment>
           </Grid.Column>
@@ -70,13 +75,12 @@ const ExperienceSection = (props) => {
         <Grid.Row only='mobile' centered style={{ maxWidth: "500px", paddingTop: "0" }}>
           <Grid.Column>
             <Segment basic>
-              <h3>Education</h3>
+              {educationHeader}
               {educationExperience(true)}
             </Segment>
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Visibility>
     </Segment>
   )
 }
