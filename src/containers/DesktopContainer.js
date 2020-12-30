@@ -11,7 +11,7 @@ const DesktopContainer = (props) => {
   return (
     <Media greaterThan='mobile'>
       <MenuActiveBreakpoint
-        setActiveItem={setActiveItem}
+        setActiveItem={props.setActiveItem}
         setFixed={setFixed}
       >
         <Ref innerRef={props.aboutMeRef}>

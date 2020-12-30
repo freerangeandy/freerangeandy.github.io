@@ -64,7 +64,7 @@ const MobileContainer = (props) => {
 
         <Sidebar.Pusher dimmed={opened}>
           <MenuActiveBreakpoint
-            setActiveItem={setActiveItem}
+            setActiveItem={props.setActiveItem}
             setFixed={setFixed}
           >
             <Ref innerRef={props.aboutMeRef}>
