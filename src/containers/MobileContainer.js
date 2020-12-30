@@ -6,7 +6,7 @@ import {
   Ref
 } from 'semantic-ui-react'
 import AboutMeSection from '../components/AboutMeSection'
-import MenuBar from '../components/MenuBar'
+import TopMenu from '../components/TopMenu'
 import MenuActiveBreakpoint from './hoc/MenuActiveBreakpoint'
 
 const MobileContainer = (props) => {
@@ -74,7 +74,7 @@ const MobileContainer = (props) => {
                 color="violet"
                 style={{ minHeight: 350, padding: '0 0 1em 0'}}
               >
-                <MenuBar
+                <TopMenu
                   fixed={fixed}
                   aboutMeRef={props.aboutMeRef}
                   experienceRef={props.experienceRef}

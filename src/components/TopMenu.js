@@ -6,7 +6,7 @@ import {
   Icon
 } from 'semantic-ui-react'
 
-const MenuBar = (props) => {
+const TopMenu = (props) => {
   const { fixed, aboutMeRef, experienceRef, projectsRef, isMobile, handleSidebarToggle } = props
   const pdfFile = require('../../assets/cv.pdf')
 
@@ -74,4 +74,4 @@ const MenuBar = (props) => {
   )
 }
 
-export default MenuBar
+export default TopMenu
