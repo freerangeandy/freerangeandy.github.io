@@ -2,19 +2,16 @@ import React, { Fragment, useState } from 'react'
 import {
   Visibility,
   Segment,
-  Container,
   Menu,
   Sidebar,
-  Button,
-  Icon,
   Ref
 } from 'semantic-ui-react'
 import AboutMeSection from '../components/AboutMeSection'
+import MenuBar from '../components/MenuBar'
 
 const MobileContainer = (props) => {
   const [fixed, setFixed] = useState(false)
   const [opened, setOpened] = useState(false)
-  const pdfFile = require('../../assets/cv.pdf')
   const Media = props.mediaWrapper
 
   const sectionRef = {
@@ -88,25 +85,15 @@ const MobileContainer = (props) => {
                 color="violet"
                 style={{ minHeight: 350, padding: '0 0 1em 0'}}
               >
-                <Menu
-                  fixed={fixed ? "top" : null}
-                  inverted={!fixed}
-                  secondary={!fixed}
-                  pointing={!fixed}
-                  size="large"
-                >
-                  <Menu.Item
-                    position="left"
-                    onClick={handleSidebarToggle}
-                  >
-                    <Icon name='sidebar' />
-                  </Menu.Item>
-                  <Menu.Item position="right">
-                    <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
-                      Resumé
-                    </Button>
-                  </Menu.Item>
-                </Menu>
+                <MenuBar
+                  fixed={fixed}
+                  aboutMeRef={props.aboutMeRef}
+                  experienceRef={props.experienceRef}
+                  projectsRef={props.projectsRef}
+                  activeItem={props.activeItem}
+                  setActiveItem={props.setActiveItem}
+                  isMobile={true}
+                />
                 <AboutMeSection />
               </Segment>
             </Ref>

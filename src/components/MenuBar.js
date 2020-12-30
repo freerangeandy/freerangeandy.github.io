@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import {
   Container,
   Menu,
   Button,
+  Icon
 } from 'semantic-ui-react'
 
 const MenuBar = (props) => {
-  const { fixed, aboutMeRef, experienceRef, projectsRef } = props
+  const { fixed, aboutMeRef, experienceRef, projectsRef, isMobile, handleSidebarToggle } = props
   const pdfFile = require('../../assets/cv.pdf')
 
   const sectionRef = {
@@ -20,15 +21,15 @@ const MenuBar = (props) => {
     props.setActiveItem(name)
   }
 
-  return (
-    <Menu
-      fixed={fixed ? "top" : null}
-      inverted={!fixed}
-      secondary={!fixed}
-      pointing={!fixed}
-      size="large"
-    >
-      <Container>
+  const sectionMenuItems = isMobile ? (
+      <Menu.Item
+        position="left"
+        onClick={handleSidebarToggle}
+      >
+        <Icon name='sidebar' />
+      </Menu.Item>
+    ) : (
+      <Fragment>
         <Menu.Item
           name="aboutMe"
           active={props.activeItem == "aboutMe"}
@@ -50,6 +51,19 @@ const MenuBar = (props) => {
         >
           Projects
         </Menu.Item>
+      </Fragment>
+    )
+
+  return (
+    <Menu
+      fixed={fixed ? "top" : null}
+      inverted={!fixed}
+      secondary={!fixed}
+      pointing={!fixed}
+      size="large"
+    >
+      <Container>
+        {sectionMenuItems}
         <Menu.Item position="right">
           <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
             Resumé

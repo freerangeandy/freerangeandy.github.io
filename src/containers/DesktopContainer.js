@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react'
 import {
   Visibility,
   Segment,
-  Container,
   Ref
 } from 'semantic-ui-react'
 import AboutMeSection from '../components/AboutMeSection'
@@ -43,6 +42,7 @@ const DesktopContainer = (props) => {
               projectsRef={props.projectsRef}
               activeItem={props.activeItem}
               setActiveItem={props.setActiveItem}
+              isMobile={false}
             />
             <AboutMeSection />
           </Segment>
