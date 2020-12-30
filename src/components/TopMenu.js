@@ -64,11 +64,20 @@ const TopMenu = (props) => {
       size="large"
     >
       {sectionMenuItems}
-      <Menu.Item position="right">
-        <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
-          Resumé
-        </Button>
-      </Menu.Item>
+      <Menu.Menu position="right">
+        <Menu.Header
+          as='h3'
+          hidden={!fixed}
+          style={{ color: 'rgb(5,5,5,0.5)', margin: '0em', padding: '0.8em 0.8em 0 0' }}
+        >
+          Andy Lee
+        </Menu.Header>
+        <Menu.Item>
+          <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
+            Resumé
+          </Button>
+        </Menu.Item>
+      </Menu.Menu>
     </Menu>
   )
 }
