@@ -12,6 +12,7 @@ import {
 import AboutMeSection from '../components/AboutMeSection'
 
 const MobileContainer = (props) => {
+  const [fixed, setFixed] = useState(false)
   const [opened, setOpened] = useState(false)
   const pdfFile = require('../../assets/cv.pdf')
   const Media = props.mediaWrapper
@@ -22,8 +23,16 @@ const MobileContainer = (props) => {
     "projects": props.projectsRef
   }
 
-  const onBottomPassed = () => { props.setActiveItem("experience") }
-  const onBottomPassedReverse = () => { props.setActiveItem("aboutMe") }
+  const onBottomPassed = () => {
+    props.setActiveItem("experience")
+    setFixed(true)
+  }
+
+  const onBottomPassedReverse = () => {
+    props.setActiveItem("aboutMe")
+    setFixed(false)
+  }
+
   const handleSidebarHide = () => { setOpened(false) }
   const handleSidebarToggle = () => { setOpened(true) }
   const handleMenuClick = (name) => {
@@ -80,8 +89,10 @@ const MobileContainer = (props) => {
                 style={{ minHeight: 350, padding: '0 0 1em 0'}}
               >
                 <Menu
-                  inverted
-                  secondary
+                  fixed={fixed ? "top" : null}
+                  inverted={!fixed}
+                  secondary={!fixed}
+                  pointing={!fixed}
                   size="large"
                 >
                   <Menu.Item
@@ -91,7 +102,7 @@ const MobileContainer = (props) => {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position="right">
-                    <Button as="a" href={pdfFile} target="blank" inverted>
+                    <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
                       Resumé
                     </Button>
                   </Menu.Item>
