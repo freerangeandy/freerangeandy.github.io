@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import {
-  Visibility,
   Segment,
   Menu,
   Sidebar,
@@ -8,6 +7,7 @@ import {
 } from 'semantic-ui-react'
 import AboutMeSection from '../components/AboutMeSection'
 import MenuBar from '../components/MenuBar'
+import MenuActiveBreakpoint from './hoc/MenuActiveBreakpoint'
 
 const MobileContainer = (props) => {
   const [fixed, setFixed] = useState(false)
@@ -18,16 +18,6 @@ const MobileContainer = (props) => {
     "aboutMe": props.aboutMeRef,
     "experience": props.experienceRef,
     "projects": props.projectsRef
-  }
-
-  const onBottomPassed = () => {
-    props.setActiveItem("experience")
-    setFixed(true)
-  }
-
-  const onBottomPassedReverse = () => {
-    props.setActiveItem("aboutMe")
-    setFixed(false)
   }
 
   const handleSidebarHide = () => { setOpened(false) }
@@ -73,10 +63,9 @@ const MobileContainer = (props) => {
         </Sidebar>
 
         <Sidebar.Pusher dimmed={opened}>
-          <Visibility
-            once={false}
-            onBottomPassed={onBottomPassed}
-            onBottomPassedReverse={onBottomPassedReverse}
+          <MenuActiveBreakpoint
+            setActiveItem={setActiveItem}
+            setFixed={setFixed}
           >
             <Ref innerRef={props.aboutMeRef}>
               <Segment
@@ -97,7 +86,7 @@ const MobileContainer = (props) => {
                 <AboutMeSection />
               </Segment>
             </Ref>
-          </Visibility>
+          </MenuActiveBreakpoint>
           {props.children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>
