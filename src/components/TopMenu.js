@@ -30,6 +30,7 @@ const TopMenu = (props) => {
       </Menu.Item>
     ) : (
       <Fragment>
+        <Menu.Item disabled>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Menu.Item>
         <Menu.Item
           name="aboutMe"
           active={props.activeItem == "aboutMe"}
@@ -62,14 +63,21 @@ const TopMenu = (props) => {
       pointing={!fixed}
       size="large"
     >
-      <Container>
-        {sectionMenuItems}
-        <Menu.Item position="right">
+      {sectionMenuItems}
+      <Menu.Menu position="right">
+        <Menu.Header
+          as='h3'
+          hidden={!fixed}
+          style={{ color: 'rgb(5,5,5,0.5)', margin: '0em', padding: '0.8em 0.8em 0 0' }}
+        >
+          Andy Lee
+        </Menu.Header>
+        <Menu.Item>
           <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
             Resumé
           </Button>
         </Menu.Item>
-      </Container>
+      </Menu.Menu>
     </Menu>
   )
 }
