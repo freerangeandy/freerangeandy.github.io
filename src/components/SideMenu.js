@@ -18,6 +18,7 @@ const SideMenu = (props) => {
       as={Menu}
       animation='overlay'
       inverted
+      color='teal'
       onHide={props.handleSidebarHide}
       vertical
       width='thin'
