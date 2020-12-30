@@ -14,24 +14,10 @@ const { MediaContextProvider, Media } = createMedia({
 const ResponsiveContainer = (props) => {
   return (
     <MediaContextProvider>
-      <DesktopContainer
-        mediaWrapper={Media}
-        aboutMeRef={props.aboutMeRef}
-        experienceRef={props.experienceRef}
-        projectsRef={props.projectsRef}
-        activeItem={props.activeItem}
-        setActiveItem={props.setActiveItem}
-      >
+      <DesktopContainer mediaWrapper={Media} {...props} >
         {props.children}
       </DesktopContainer>
-      <MobileContainer
-        mediaWrapper={Media}
-        aboutMeRef={props.aboutMeRef}
-        experienceRef={props.experienceRef}
-        projectsRef={props.projectsRef}
-        activeItem={props.activeItem}
-        setActiveItem={props.setActiveItem}
-      >
+      <MobileContainer mediaWrapper={Media} {...props} >
         {props.children}
       </MobileContainer>
     </MediaContextProvider>
