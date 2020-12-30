@@ -22,10 +22,12 @@ const SideMenu = (props) => {
       onHide={props.handleSidebarHide}
       vertical
       width='thin'
+      size='huge'
       visible={props.opened}
     >
       <Menu.Item
         onClick={props.handleSidebarToggle}
+        style={{ padding: '1.2em 0 0.8em 0.5em' }}
       >
         <Icon name='sidebar' style={{ float:'left' }} /> &nbsp;
       </Menu.Item>
