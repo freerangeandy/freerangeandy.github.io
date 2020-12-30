@@ -11,7 +11,7 @@ const MobileContainer = (props) => {
   const Media = props.mediaWrapper
 
   const handleSidebarHide = () => { setOpened(false) }
-  const handleSidebarToggle = () => { setOpened(true) }
+  const handleSidebarToggle = () => { setOpened(!opened) }
 
   return (
     <Media at='mobile'>
@@ -19,6 +19,7 @@ const MobileContainer = (props) => {
         <SideMenu
           opened={opened}
           handleSidebarHide={handleSidebarHide}
+          handleSidebarToggle={handleSidebarToggle}
           activeItem={props.activeItem}
           setActiveItem={props.setActiveItem}
           aboutMeRef={props.aboutMeRef}
