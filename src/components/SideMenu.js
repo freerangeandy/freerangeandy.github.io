@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sidebar, Menu } from 'semantic-ui-react'
+import { Sidebar, Menu, Icon } from 'semantic-ui-react'
 
 const SideMenu = (props) => {
   const sectionRef = {
@@ -24,6 +24,11 @@ const SideMenu = (props) => {
       width='thin'
       visible={props.opened}
     >
+      <Menu.Item
+        onClick={props.handleSidebarToggle}
+      >
+        <Icon name='sidebar' style={{ float:'left' }} /> &nbsp;
+      </Menu.Item>
       <Menu.Item
         name="aboutMe"
         active={props.activeItem == "aboutMe"}
