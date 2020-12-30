@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import { Segment, Ref } from 'semantic-ui-react'
 import AboutMeSection from '../components/AboutMeSection'
 import TopMenu from '../components/TopMenu'
