@@ -62,14 +62,12 @@ const TopMenu = (props) => {
       pointing={!fixed}
       size="large"
     >
-      <Container>
-        {sectionMenuItems}
-        <Menu.Item position="right">
-          <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
-            Resumé
-          </Button>
-        </Menu.Item>
-      </Container>
+      {sectionMenuItems}
+      <Menu.Item position="right">
+        <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
+          Resumé
+        </Button>
+      </Menu.Item>
     </Menu>
   )
 }
