@@ -30,6 +30,7 @@ const TopMenu = (props) => {
       </Menu.Item>
     ) : (
       <Fragment>
+        <Menu.Item disabled>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Menu.Item>
         <Menu.Item
           name="aboutMe"
           active={props.activeItem == "aboutMe"}
