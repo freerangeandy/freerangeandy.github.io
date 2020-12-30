@@ -20,6 +20,7 @@ const MobileContainer = (props) => {
           opened={opened}
           handleSidebarHide={handleSidebarHide}
           activeItem={props.activeItem}
+          setActiveItem={props.setActiveItem}
           aboutMeRef={props.aboutMeRef}
           experienceRef={props.experienceRef}
           projectsRef={props.projectsRef}
