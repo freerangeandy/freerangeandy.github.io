@@ -73,7 +73,7 @@ const TopMenu = (props) => {
           Andy Lee
         </Menu.Header>
         <Menu.Item>
-          <Button as="a" href={pdfFile} target="blank" inverted={!fixed}>
+          <Button as="a" href={pdfFile} target="_blank" inverted={!fixed}>
             Resumé
           </Button>
         </Menu.Item>
