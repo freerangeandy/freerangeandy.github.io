@@ -21,7 +21,7 @@ const PDFViewPortal = (props) => {
             content='Download'
             icon='download'
             labelPosition='left'
-            onClick={()=>console.log("download")}
+            as="a" href={PdfFile} rel="noopener noreferrer" download="Andrew_Lee_CV.pdf"
           />
           <Button
             size="small"
