@@ -29,7 +29,7 @@ const PDFViewPortal = (props) => {
             content='Expand'
             icon='external'
             labelPosition='left'
-            onClick={()=>console.log("expand")}
+            as="a" href={PdfFile} rel="noopener noreferrer" target="_blank"
           />
           <Icon
             link
