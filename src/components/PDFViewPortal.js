@@ -1,12 +1,12 @@
 import React from 'react'
-import { Button, Segment, Portal } from 'semantic-ui-react'
+import { Button, Icon, Segment, Portal } from 'semantic-ui-react'
 import { Document, Page } from 'react-pdf/dist/esm/entry.parcel'
 import PdfFile from '../../assets/cv.pdf'
 
 const PDFViewPortal = (props) => {
   const pdfScale = props.isMobile ? 0.5 : 1.0
   const pdfRight = props.isMobile ? '6%' : '2%'
-  
+
   return (
     <Portal
       openOnTriggerClick
@@ -29,6 +29,13 @@ const PDFViewPortal = (props) => {
             content='Expand'
             icon='external'
             labelPosition='left'
+          />
+          <Icon
+            link
+            circular
+            bordered
+            name='x'
+            style={{ float: 'right' }}
           />
         <Document file={PdfFile} onItemClick={()=>console.log("outline")}>
           <Page pageNumber={1} scale={pdfScale} renderTextLayer={false} />
