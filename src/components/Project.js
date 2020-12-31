@@ -8,7 +8,11 @@ import {
 } from 'semantic-ui-react'
 
 const Project = (props) => {
-  const screenshot = props.screenshot ? <Image src={props.screenshot} /> : null
+  const screenshot = props.screenshot ? (
+      <a href={props.siteurl} rel="noopener noreferrer" target="_blank">
+        <Image alt={`${props.name} screenshot`} src={props.screenshot} />
+      </a>
+    ) : null
   const labels = props.labels ? props.labels.map((label,idx) => (
     <Label
       horizontal
@@ -18,13 +22,18 @@ const Project = (props) => {
       {label}
     </Label>
   )) : null
+
   return (
     <Card>
       <Card.Header style={{ padding: '0.5em' }}>
         <Header as='h5'>
           {props.name}&nbsp;&nbsp;&nbsp;
-          <a href={props.siteurl} target="#"><Icon link name='sign-in' /></a>
-          <a href={props.gitrepo} target="#"><Icon link name='github' /></a>
+          <a href={props.siteurl} rel="noopener noreferrer" target="_blank">
+            <Icon link name='sign-in' />
+          </a>
+          <a href={props.gitrepo} rel="noopener noreferrer" target="_blank">
+            <Icon link name='github' />
+          </a>
         </Header>
       </Card.Header>
       {screenshot}
