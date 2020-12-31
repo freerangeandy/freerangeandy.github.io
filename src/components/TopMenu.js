@@ -5,6 +5,7 @@ import {
   Button,
   Icon
 } from 'semantic-ui-react'
+import PDFViewPortal from './PDFViewPortal'
 
 const TopMenu = (props) => {
   const { fixed, aboutMeRef, experienceRef, projectsRef, isMobile, handleSidebarToggle } = props
@@ -73,9 +74,7 @@ const TopMenu = (props) => {
           Andy Lee
         </Menu.Header>
         <Menu.Item>
-          <Button as="a" href={pdfFile} rel="noopener noreferrer" target="_blank" inverted={!fixed}>
-            Resumé
-          </Button>
+          <PDFViewPortal fixed={fixed} />
         </Menu.Item>
       </Menu.Menu>
     </Menu>
