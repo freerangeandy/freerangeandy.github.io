@@ -8,10 +8,9 @@ import {
 } from 'semantic-ui-react'
 
 const Project = (props) => {
-  const screenshot = props.screenshot
-    ? (
+  const screenshot = props.screenshot ? (
       <a href={props.siteurl} rel="noopener noreferrer" target="_blank">
-        <Image src={props.screenshot} />
+        <Image alt={`${props.name} screenshot`} src={props.screenshot} />
       </a>
     ) : null
   const labels = props.labels ? props.labels.map((label,idx) => (
@@ -23,6 +22,7 @@ const Project = (props) => {
       {label}
     </Label>
   )) : null
+
   return (
     <Card>
       <Card.Header style={{ padding: '0.5em' }}>
