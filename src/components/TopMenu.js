@@ -74,7 +74,7 @@ const TopMenu = (props) => {
           Andy Lee
         </Menu.Header>
         <Menu.Item>
-          <PDFViewPortal fixed={fixed} />
+          <PDFViewPortal fixed={fixed} isMobile={isMobile} />
         </Menu.Item>
       </Menu.Menu>
     </Menu>

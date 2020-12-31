@@ -4,6 +4,9 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.parcel'
 import PdfFile from '../../assets/cv.pdf'
 
 const PDFViewPortal = (props) => {
+  const pdfScale = props.isMobile ? 0.5 : 1.0
+  const pdfRight = props.isMobile ? '6%' : '2%'
+  
   return (
     <Portal
       openOnTriggerClick
@@ -12,9 +15,9 @@ const PDFViewPortal = (props) => {
       onOpen={()=>console.log("open")}
       onClose={()=>console.log("close")}
     >
-      <Segment style={{ top:'6%', right:'3%', position:'fixed', zIndex:1000 }}>
+      <Segment style={{ top:'6%', right:pdfRight, position:'fixed', zIndex:1000 }}>
         <Document file={PdfFile}>
-          <Page pageNumber={1} renderTextLayer={false} />
+          <Page pageNumber={1} scale={pdfScale} renderTextLayer={false} />
         </Document>
       </Segment>
     </Portal>
