@@ -38,10 +38,10 @@ const AboutMeSection = (props) => {
     <Container textAlign='center'>
       <h1 style={{ marginBottom:'0' }}>Andy Lee</h1>
       <List inverted link horizontal>
-        <List.Item as='a' href="https://www.linkedin.com/in/andrew-lee-1701d/" target='_blank'>
+        <List.Item as='a' href="https://www.linkedin.com/in/andrew-lee-1701d/" rel="noopener noreferrer" target='_blank'>
           <Icon name='linkedin' /> LinkedIn
         </List.Item>
-        <List.Item as='a' href="https://www.github.com/freerangeandy" target='_blank'>
+        <List.Item as='a' href="https://www.github.com/freerangeandy" rel="noopener noreferrer" target='_blank'>
           <Icon name='github' /> GitHub
         </List.Item>
       </List>
