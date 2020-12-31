@@ -16,7 +16,21 @@ const PDFViewPortal = (props) => {
       onClose={()=>console.log("close")}
     >
       <Segment style={{ top:'6%', right:pdfRight, position:'fixed', zIndex:1000 }}>
-        <Document file={PdfFile}>
+          <Button
+            size="small"
+            color="teal"
+            content='Download'
+            icon='download'
+            labelPosition='left'
+          />
+          <Button
+            size="small"
+            color="teal"
+            content='Expand'
+            icon='external'
+            labelPosition='left'
+          />
+        <Document file={PdfFile} onItemClick={()=>console.log("outline")}>
           <Page pageNumber={1} scale={pdfScale} renderTextLayer={false} />
         </Document>
       </Segment>
