@@ -9,8 +9,7 @@ const SideMenu = (props) => {
   }
 
   const handleMenuClick = (name) => {
-    sectionRef[name].current.scrollIntoView()
-    props.setActiveItem(name)
+    sectionRef[name].current.scrollIntoView({ behavior: "smooth" })
   }
 
   return (

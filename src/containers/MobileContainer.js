@@ -39,6 +39,7 @@ const MobileContainer = (props) => {
                 color="violet"
                 style={{ minHeight: 350, padding: '0 0 1em 0'}}
               >
+                {fixed ? (<h2 style={{ height: '2.3em' }}></h2>) : null}
                 <TopMenu
                   fixed={fixed}
                   handleSidebarToggle={handleSidebarToggle}
