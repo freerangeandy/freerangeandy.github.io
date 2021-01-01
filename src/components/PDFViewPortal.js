@@ -8,15 +8,24 @@ const PDFViewPortal = (props) => {
   const pdfScale = props.isMobile ? 0.5 : 1.0
   const pdfRight = props.isMobile ? '6%' : '2%'
 
+  const hidePortal = () => {
+    document.getElementById("page-mask").classList.remove("dimmed-mask")
+    setOpen(false)
+  }
+  const togglePortal = () => {
+    document.getElementById("page-mask").classList.toggle("dimmed-mask")
+    setOpen(!open)
+  }
+
   return (
     <Fragment>
-      <Button onClick={() => setOpen(!open)} inverted={!props.fixed}>
+      <Button onClick={togglePortal} inverted={!props.fixed}>
         Resumé
       </Button>
       <TransitionablePortal
         open={open}
         transition={{ animation:'fade', duration: 500 }}
-        onClose={() => setOpen(false)}
+        onClose={hidePortal}
       >
         <Segment style={{ top:'6%', right:pdfRight, position:'fixed', zIndex:1000 }}>
           <Button
@@ -41,7 +50,7 @@ const PDFViewPortal = (props) => {
             bordered
             name='x'
             style={{ float: 'right' }}
-            onClick={() => setOpen(false)}
+            onClick={hidePortal}
           />
           <Document file={PdfFile} onItemClick={()=>console.log("outline")}>
             <Page pageNumber={1} scale={pdfScale} renderTextLayer={false} />
