@@ -26,8 +26,9 @@ const TopMenu = (props) => {
       <Menu.Item
         position="left"
         onClick={handleSidebarToggle}
+        className="no-close"
       >
-        <Icon name='sidebar' />
+        <Icon className="no-close" name='sidebar' />
       </Menu.Item>
     ) : (
       <Fragment>

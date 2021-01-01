@@ -10,7 +10,11 @@ const MobileContainer = (props) => {
   const [opened, setOpened] = useState(false)
   const Media = props.mediaWrapper
 
-  const handleSidebarHide = () => { setOpened(false) }
+  const handleSidebarHide = (e) => {
+    if(e && !e.target.classList.contains("no-close")){
+      setOpened(false)
+    }
+  }
   const handleSidebarToggle = () => { setOpened(!opened) }
 
   return (
