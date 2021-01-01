@@ -26,7 +26,7 @@ const PDFViewPortal = (props) => {
       </Button>
       <TransitionablePortal
         open={open}
-        transition={{ animation:'fade', duration: 500 }}
+        transition={{ animation:'fade', duration: 300 }}
       >
         <Segment style={{ top:'6%', right:pdfRight, position:'fixed', zIndex:1000 }}>
           <Button
@@ -53,7 +53,7 @@ const PDFViewPortal = (props) => {
             style={{ float: 'right' }}
             onClick={hidePortal}
           />
-          <Document file={PdfFile} onItemClick={()=>console.log("outline")}>
+          <Document file={PdfFile}>
             <Page pageNumber={1} scale={pdfScale} renderTextLayer={false} />
           </Document>
         </Segment>
