@@ -10,10 +10,12 @@ const PDFViewPortal = (props) => {
 
   const hidePortal = () => {
     document.getElementById("page-mask").classList.remove("dimmed-mask")
+    document.getElementById("page-mask").onclick = null
     setOpen(false)
   }
   const togglePortal = () => {
     document.getElementById("page-mask").classList.toggle("dimmed-mask")
+    document.getElementById("page-mask").onclick = open ? null : hidePortal
     setOpen(!open)
   }
 
@@ -25,7 +27,6 @@ const PDFViewPortal = (props) => {
       <TransitionablePortal
         open={open}
         transition={{ animation:'fade', duration: 500 }}
-        onClose={hidePortal}
       >
         <Segment style={{ top:'6%', right:pdfRight, position:'fixed', zIndex:1000 }}>
           <Button
