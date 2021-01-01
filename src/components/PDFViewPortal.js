@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { Button, Icon, Segment, Portal } from 'semantic-ui-react'
+import { Button, Icon, Segment, TransitionablePortal } from 'semantic-ui-react'
 import { Document, Page } from 'react-pdf/dist/esm/entry.parcel'
 import PdfFile from '../../assets/cv.pdf'
 
@@ -13,7 +13,11 @@ const PDFViewPortal = (props) => {
       <Button onClick={() => setOpen(!open)} inverted={!props.fixed}>
         Resumé
       </Button>
-      <Portal open={open} onClose={() => setOpen(false)}>
+      <TransitionablePortal
+        open={open}
+        transition={{ animation:'fade', duration: 500 }}
+        onClose={() => setOpen(false)}
+      >
         <Segment style={{ top:'6%', right:pdfRight, position:'fixed', zIndex:1000 }}>
           <Button
             size="small"
@@ -43,7 +47,7 @@ const PDFViewPortal = (props) => {
             <Page pageNumber={1} scale={pdfScale} renderTextLayer={false} />
           </Document>
         </Segment>
-      </Portal>
+      </TransitionablePortal>
     </Fragment>
   )
 }
