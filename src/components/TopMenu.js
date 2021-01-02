@@ -57,6 +57,12 @@ const TopMenu = (props) => {
       </Fragment>
     )
 
+  const resumeButton = isMobile ? (
+    <Button as="a" href={pdfFile} rel="noopener noreferrer" target="_blank" inverted={!fixed}>
+      Resumé
+    </Button>
+  ) : (<PDFViewPortal fixed={fixed} isMobile={isMobile} />)
+
   return (
     <Menu
       fixed={fixed ? "top" : null}
@@ -75,7 +81,7 @@ const TopMenu = (props) => {
           Andy Lee
         </Menu.Header>
         <Menu.Item>
-          <PDFViewPortal fixed={fixed} isMobile={isMobile} />
+          {resumeButton}
         </Menu.Item>
       </Menu.Menu>
     </Menu>
