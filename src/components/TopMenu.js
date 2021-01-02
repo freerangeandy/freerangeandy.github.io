@@ -1,15 +1,10 @@
 import React, { Fragment } from 'react'
-import {
-  Container,
-  Menu,
-  Button,
-  Icon
-} from 'semantic-ui-react'
+import { Container, Menu, Button, Icon } from 'semantic-ui-react'
 import PDFViewPortal from './PDFViewPortal'
+import PdfFile from '../../assets/cv.pdf'
 
 const TopMenu = (props) => {
   const { fixed, aboutMeRef, experienceRef, projectsRef, isMobile, handleSidebarToggle } = props
-  const pdfFile = require('../../assets/cv.pdf')
 
   const sectionRef = {
     "aboutMe": aboutMeRef,
@@ -58,7 +53,7 @@ const TopMenu = (props) => {
     )
 
   const resumeButton = isMobile ? (
-    <Button as="a" href={pdfFile} rel="noopener noreferrer" target="_blank" inverted={!fixed}>
+    <Button as="a" href={PdfFile} rel="noopener noreferrer" target="_blank" inverted={!fixed}>
       Resumé
     </Button>
   ) : (<PDFViewPortal fixed={fixed} isMobile={isMobile} />)
