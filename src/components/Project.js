@@ -7,6 +7,11 @@ import {
   Image
 } from 'semantic-ui-react'
 
+const getLabelColor = (label) => {
+  const nonTechLabels = ["Game", "Hackathon", "Team project"]
+  return nonTechLabels.includes(label) ? "green" : "blue"
+}
+
 const Project = (props) => {
   const screenshot = props.screenshot ? (
       <a href={props.siteurl} rel="noopener noreferrer" target="_blank">
@@ -17,6 +22,7 @@ const Project = (props) => {
     <Label
       horizontal
       key={idx}
+      color={getLabelColor(label)}
       style={{ marginBottom:'0.2em' }}
     >
       {label}
