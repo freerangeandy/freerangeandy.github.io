@@ -86,7 +86,7 @@
     },
     {
       "name": "Cell Blocks",
-      "description": "Cellular automata sandbox (Conway's Game of Life)",
+      "description": "Cellular automaton sandbox (Conway's Game of Life)",
       "screenshot": "cell_blocks",
       "siteurl": "https://freerangeandy.github.io/cell-blocks/",
       "gitrepo": "https://github.com/freerangeandy/cell-blocks",
@@ -98,7 +98,7 @@
       "screenshot": "ff_reality",
       "siteurl": "https://ff-reality.herokuapp.com/",
       "gitrepo": "https://github.com/freerangeandy/ff-reality",
-      "labels": ["Python","Flask","pandas","Web-scraping"]
+      "labels": ["Python","Flask","pandas","Web scraping"]
     }
   ]
 }
