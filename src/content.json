@@ -61,6 +61,14 @@
       "labels": ["JavaScript","React","MaterialUI","Responsive"]
     },
     {
+      "name": "Wrassle for the Castle",
+      "description": "Turn-based game of sending armies to capture castles",
+      "screenshot": "wrassle_castle",
+      "siteurl": "https://wrassle-for-the-castle-alt.herokuapp.com/",
+      "gitrepo": "https://github.com/flashnej/wrassle-for-the-castle",
+      "labels": ["JavaScript","React","Ruby on Rails","WebSocket","Team project", "Game", "Hackathon"]
+    },
+    {
       "name": "Many City Weather",
       "description": "Hourly weather forecast comparison between cities",
       "screenshot": "many_city_weather",
