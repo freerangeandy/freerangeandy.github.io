@@ -29,7 +29,7 @@ const Project = (props) => {
         <Header as='h5'>
           {props.name}&nbsp;&nbsp;&nbsp;
           <a href={props.siteurl} rel="noopener noreferrer" target="_blank">
-            <Icon link name='sign-in' />
+            <Icon link name='external' />
           </a>
           <a href={props.gitrepo} rel="noopener noreferrer" target="_blank">
             <Icon link name='github' />
