@@ -35,6 +35,12 @@
       }
     ]
   },
+  "blog": [
+    {
+      "title": "VALIC",
+      "post": "[placeholder]"
+    }
+  ],
   "projects": [
     {
       "name": "Tab Loom",
