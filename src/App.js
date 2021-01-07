@@ -24,13 +24,14 @@ const App = (props) => {
       activeItem={activeItem}
       setActiveItem={setActiveItem}
     >
-      <BlogSection
-        blogRef={blogRef}
-      />
       <ExperienceSection
         experienceRef={experienceRef}
         setActiveItem={setActiveItem}
         items={content.experience}
+      />
+      <BlogSection
+        blogRef={blogRef}
+        items={content.blog}
       />
       <ProjectsSection
         projectsRef={projectsRef}
